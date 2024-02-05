@@ -1,0 +1,18 @@
+.form-block {
+    &__title {
+        width: 100%;
+        max-width: rem(570px);
+        flex: 0 0 auto;
+    }
+
+    &__wrap {
+        background: var(--accent-gradient);
+        padding: rem(60px 0);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: rem(30px);
+    }
+}

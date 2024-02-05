@@ -1,3 +1,11 @@
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1310px,
+);
+
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/variables-dark";
@@ -16,6 +24,9 @@
 @import "components/modals";
 @import "components/small-components";
 @import "components/forms";
+@import "components/cards";
 @import "layout/header";
 @import "layout/footer";
 @import "blocks/front-hero";
+@import "blocks/type-block";
+@import "blocks/form-block";

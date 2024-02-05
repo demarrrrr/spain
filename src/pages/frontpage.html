@@ -17,79 +17,225 @@
                         <h1 class="front-hero__heading">
                             ВНЖ Испании за месяц
                         </h1>
-    
+
                         <div class="front-hero__subheading">
                             Получи вид на жительство в Испании за месяца от 500 €
                         </div>
-    
+
                         <div class="front-hero__info">
                             <b>Аскар Аскаров</b> оказываю юридическую помощью в Испании
                         </div>
-    
+
                         <ul class="front-hero__list">
-    
+
                             <li class="front-hero__item">
                                 Оказываю юридическую помощь с 2015 года
                             </li>
-    
+
                             <li class="front-hero__item">
                                 Живу в городе Барселона
                             </li>
-    
+
                             <li class="front-hero__item">
                                 Более 70 успешных оформленных ВНЖ
                             </li>
-    
+
                             <li class="front-hero__item">
                                 Оказываю юридическую помощь с 2015 года
                             </li>
-    
+
                         </ul>
-    
+
                         <div class="front-hero__small-contacts small-contacts">
-    
+
                             <div class="small-contacts__wrap">
-    
+
                                 <img src="@/assets/img/icons/tel-wa.svg" alt="" class="small-contacts__icon">
-    
+
                                 <div class="small-contacts__text-wrap">
                                     <div class="small-contacts__work-time">
                                         Ежедневно с 10:00 до 22:00
                                     </div>
                                     <a href="#" class="small-contacts__tel">+7 969 349-33-26</a>
                                 </div>
-    
+
                             </div>
-    
+
                         </div>
-    
+
                         <form class="front-hero__form-main form-main">
-    
+
                             <div class="form-main__group">
-    
+
                                 <label for="tel1" class="sr-only">Телефон</label>
-    
+
                                 <input type="tel" id="tel1" class="form-main__input">
-    
+
                                 <button class="form-main__submit">
                                     Оставить заявку
                                 </button>
-    
+
                             </div>
-    
+
                             <div class="form-main__policy">
-                                Нажимая “Оставить заявку”, вы даете согласие на обработку <button class="form-main__btn-link">персональных данных</button> и ознакомлен с
+                                Нажимая “Оставить заявку”, вы даете согласие на обработку <button
+                                    class="form-main__btn-link">персональных данных</button> и ознакомлен с
                                 <button class="form-main__btn-link">политикой конфеденциальности.</button>
                             </div>
-    
+
                         </form>
-    
+
                     </div>
 
                 </div>
 
                 {{> picture class="front-hero__img-wrap"
                 src="person.png" }}
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="frontpage__types-block types-block">
+
+        <div class="types-block__wrap">
+
+            <div class="container">
+
+                <div class="types-block__content">
+
+                    <h2 class="types-block__title">
+                        <span>Виды</span> ВНЖ
+                    </h2>
+
+                    <div class="types-block__subheading">В ВНЖ Испании предоставляется несколько видов: инвестиционное,
+                        рабочее, семейное и пенсионное. Каждый подходит для разных целей и категорий иностранцев.</div>
+
+                    <svg class="types-block__dec-icon" width="30" height="35" viewBox="0 0 30 35" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.47367 8.72716C9.47367 4.51618 14.9393 0 14.9393 0C14.9393 0 20.5668 4.51618 20.5668 8.72716C20.5668 11.9851 19.2053 14.811 18.5739 15.9464C19.5605 14.5538 21.5873 13.6095 23.9676 13.6095C27.2874 13.6095 30 15.5318 30 17.9425C30 18.6138 29.4332 19.7124 29.0283 20.2921L27.0446 23.313C26.3968 22.184 24.8583 21.5737 23.0769 21.5737C20.6882 21.5737 18.7854 22.9469 18.7854 24.6557C18.7854 24.7754 18.7854 24.8893 18.7921 25H11.2691C11.2879 24.8893 11.2956 24.7754 11.2956 24.6557C11.2956 22.9469 9.31176 21.5737 6.9231 21.5737C5.14173 21.5737 3.60328 22.184 2.95551 23.313L0.971682 20.2921C0.566824 19.7124 0 18.6138 0 17.9425C0 15.5318 2.71255 13.6095 6.07287 13.6095C8.46085 13.6095 10.5155 14.5894 11.5107 16.0249C10.9011 14.9459 9.47367 12.063 9.47367 8.72716ZM10.335 29L7.32792 33.5048L11.6599 32.2232L14.9393 35L18.3401 32.2232L22.6721 33.5048L19.7022 29H10.335Z"
+                            fill="#EA860B" />
+                        <path d="M7 28H24V26H7V28Z" fill="#EA860B" />
+                    </svg>
+
+                    <ul class="types-block__list">
+
+                        {{# range 6}}
+
+                        <li class="types-block__type-card type-card">
+
+                            <a href="" class="type-card__body">
+
+                                <div class="type-card__border-wrap">
+                                    {{> picture class="type-card__img-wrap"
+                                    src="placeholders/type1.jpg" }}
+                                </div>
+
+                                <div class="type-card__name">Гражданский брак</div>
+
+                                <div class="type-card__category">Pareja de hecho</div>
+
+                                <p class="type-card__info">Надежный путь к легальному пребыванию в этой удивительной
+                                    стране. Испания предоставляет возможность иностранцам заключить гражданский брак с
+                                    испанцем или резидентом, что позволяет получить ВНЖ.</p>
+
+                                <div class="type-card__list-wrap">
+
+                                    <div class="type-card__list-name">
+                                        Плюсы:
+                                    </div>
+
+                                    <ul class="type-card__list type-card__list--advantages">
+
+                                        <li class="type-card__item">
+                                            Выдается на 5 лет
+                                            Выдается на 5 лет
+                                            Выдается на 5 лет
+                                            Выдается на 5 лет
+                                        </li>
+
+                                        <li class="type-card__item">
+                                            Выдается на 5 лет
+                                            Выдается на 5 лет
+                                            Выдается на 5 лет
+                                            Выдается на 5 лет
+                                        </li>
+
+                                    </ul>
+
+
+                                </div>
+
+                                <div class="type-card__list-wrap">
+                                    <div class="type-card__list-name">
+                                        Минусы:
+                                    </div>
+
+                                    <ul class="type-card__list type-card__list--disadvantages">
+
+                                        <li class="type-card__item">
+                                            Срок оформления 3-4 месяца
+                                        </li>
+
+                                        <li class="type-card__item">
+                                            Нахождение в стране 183 из 365 дней
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </a>
+
+                        </li>
+
+                        {{/ range}}
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="frontpage__form-block form-block">
+
+        <div class="form-block__wrap">
+
+            <div class="container">
+
+                <div class="form-block__content">
+
+                    <h2 class="form-block__title">
+                        Записаться на бесплатную консультацию!
+                    </h2>
+
+                    <form class="front-hero__form-main form-main">
+
+                        <div class="form-main__group">
+
+                            <label for="tel2" class="sr-only">Телефон</label>
+
+                            <input type="tel" id="tel2" class="form-main__input form-main__input--long">
+
+                            <button class="form-main__submit-border">
+                                Оставить заявку
+                            </button>
+
+                        </div>
+
+                        <div class="form-main__policy form-main__policy--main">
+                            Нажимая на “Бесплатная консультация” я даю согласие на обработку моих персональных данных (в соответствии с Федеральным законом №152-ФЗ «О персональных данных»)
+                        </div>
+
+                    </form>
+
+                </div>
 
             </div>
 

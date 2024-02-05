@@ -6,4 +6,9 @@ h1 {
 h2 {
     font-size: rem(38px);
     font-weight: 700;
+    line-height: 145%;
+
+    span {
+        color: var(--accent-orange);
+    }
 }

@@ -1,7 +1,11 @@
 :root {
     --accent-green: #2aa81a;
     --accent-red: #c60b1e;
-    --accent-main: #2e2e2e;
+    --accent-orange: #ea860b;
+    --main: #2e2e2e;
     --white: #fff;
     --border-light: #f2f2f2;
+    --accent-gradient: linear-gradient(-105deg, #ea860b 0, #ffc400 100%);
 }
+
+$pb: rem(100px);

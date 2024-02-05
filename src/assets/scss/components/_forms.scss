@@ -12,6 +12,10 @@
         font-size: rem(16px);
     }
 
+    &__submit-border {
+        @extend %btn-border;
+    }
+
     &__input {
         width: 100%;
         max-width: rem(370px);
@@ -19,12 +23,20 @@
         background: var(--white);
         border-radius: 10px;
         border: 1px solid var(--border-light);
+
+        &--long {
+            max-width: rem(390px);
+        }
     }
 
     &__policy {
         line-height: 155%;
         opacity: 0.5;
         font-size: rem(14px);
+
+        &--main {
+            opacity: 1;
+        }
     }
 
     &__btn-link {
