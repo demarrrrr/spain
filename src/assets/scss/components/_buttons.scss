@@ -6,8 +6,10 @@
     line-height: 160%;
     font-size: 14px;
     text-transform: uppercase;
-    display: block;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: rem(10px);
 }
 
 %btn-border {

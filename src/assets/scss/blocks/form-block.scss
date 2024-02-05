@@ -8,6 +8,7 @@
     &__wrap {
         background: var(--accent-gradient);
         padding: rem(60px 0);
+        margin-bottom: $pb;
     }
 
     &__content {

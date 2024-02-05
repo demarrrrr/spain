@@ -1,14 +1,14 @@
-.types-block {
+.documents-block {
     &__wrap {
         margin-bottom: $pb;
     }
 
     &__title {
         width: fit-content;
+        max-width: rem(752px);
         margin: 0 auto;
         text-align: center;
         margin-bottom: rem(30px);
-        max-width: rem(752px);
     }
 
     &__subheading {
@@ -28,8 +28,13 @@
     &__list {
         @include unlist();
 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: rem(40px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem(20px);
+    }
+
+    &__document-card {
+        width: calc(33% - 20px);
     }
 }
