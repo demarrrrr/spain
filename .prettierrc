@@ -1,0 +1,20 @@
+{
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "maxLength": 120,
+    "overrides": [
+        {
+            "files": "*.hbs",
+            "options": {
+                "singleQuote": false
+            }
+        },
+        {
+            "files": "*.scss",
+            "options": {
+                "singleQuote": false
+            }
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": ["ESNext", "ESNext.AsyncIterable", "DOM", "dom.iterable"],
+        "allowJs": false,
+        "sourceMap": true,
+        "strict": true,
+        "noEmit": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "baseUrl": "./",
+        "paths": {
+            "~/*": ["./*"],
+            "@/*": ["./*"]
+        },
+        "types": ["@types/webpack-env"]
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "commonjs"
+        }
+    },
+    "include": [
+        "./types/untyped.d.ts",
+        "src",
+        "webpack.config.ts",
+        "./configuration",
+        "./utils"
+    ],
+    "exclude": ["node_modules", "dist"]
+}

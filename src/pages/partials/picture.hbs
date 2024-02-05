@@ -1,0 +1,6 @@
+<picture {{#if class}} class='{{class}}' {{/if}}>
+    {{#img src unlazy}}
+        <source srcset='{{avif}}' type='image/avif' >
+        <img {{#unless unlazy}} loading="lazy" {{/unless}} src='{{webp}}' alt='{{alt}}'>
+    {{/img}}
+</picture>

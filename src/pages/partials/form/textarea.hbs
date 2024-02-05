@@ -1,0 +1,16 @@
+<div class="{{class}} textarea">
+    <div class="textarea__wrap">
+        {{#uid label placeholder name }}
+            <label for="{{id}}" class="textarea__label">
+                {{label}}
+            </label>
+            <textarea
+                class="textarea__control"
+                id="{{id}}"
+                name="{{name}}"
+                placeholder="{{placeholder}}"
+                rows="6"
+            ></textarea>
+        {{/uid}}
+    </div>
+</div>

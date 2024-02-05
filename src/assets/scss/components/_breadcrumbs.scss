@@ -1,0 +1,21 @@
+.breadcrumbs {
+    &__list {
+        @include unlist();
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

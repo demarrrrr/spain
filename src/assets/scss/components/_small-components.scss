@@ -1,0 +1,54 @@
+.small-contacts {
+    &__wrap {
+        display: flex;
+        align-items: center;
+        gap: rem(10px);
+    }
+
+    &__icon {
+        width: rem(25px);
+        height: rem(25px);
+        display: block;
+        object-fit: contain;
+    }
+
+    &__tel {
+        font-weight: 700;
+        font-size: rem(24px);
+        text-decoration: none;
+        line-height: 140%;
+    }
+
+    &__work-time {
+        font-size: rem(14px);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        span {
+            border-radius: 50%;
+            width: 6px;
+            height: 6px;
+            display: block;
+            background-color: var(--accent-green);
+        }
+    }
+}
+
+.small-socials {
+    &__list {
+        @include unlist();
+
+        display: flex;
+        align-items: center;
+        gap: rem(10px);
+    }
+
+    &__logo {
+        img {
+            width: rem(46px);
+            height: rem(46px);
+            display: block;
+        }
+    }
+}

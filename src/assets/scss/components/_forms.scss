@@ -1,0 +1,34 @@
+.form-main {
+    &__group {
+        display: flex;
+        align-items: center;
+        gap: rem(10px);
+        margin-bottom: rem(20px);
+    }
+
+    &__submit {
+        @extend %btn-main;
+
+        font-size: rem(16px);
+    }
+
+    &__input {
+        width: 100%;
+        max-width: rem(370px);
+        padding: rem(20px);
+        background: var(--white);
+        border-radius: 10px;
+        border: 1px solid var(--border-light);
+    }
+
+    &__policy {
+        line-height: 155%;
+        opacity: 0.5;
+        font-size: rem(14px);
+    }
+
+    &__btn-link {
+        display: contents;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,12 @@
+<div class='{{class}} input'>
+    {{#uid label placeholder name type }}
+        <div class='input__wrap'>
+            <label for='{{id}}' class='input__label'>
+                {{label}}
+            </label>
+            <input type='{{type}}' name="{{name}}" class='input__control' id='{{id}}' placeholder='{{placeholder}}' {{#if
+                required}} required {{/if}}>
+            </input>
+        </div>
+    {{/uid}}
+</div>

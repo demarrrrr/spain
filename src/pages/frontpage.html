@@ -1,0 +1,102 @@
+<!-- Название страницы:Главная -->
+
+{{> ./layout/header title='Главная' }}
+
+<main class="frontpage">
+
+    <section class="frontpage__front-hero front-hero">
+
+        <div class="front-hero__wrap">
+
+            <div class="container">
+
+                <div class="front-hero__content">
+
+                    <div class="front-hero__text-content">
+
+                        <h1 class="front-hero__heading">
+                            ВНЖ Испании за месяц
+                        </h1>
+    
+                        <div class="front-hero__subheading">
+                            Получи вид на жительство в Испании за месяца от 500 €
+                        </div>
+    
+                        <div class="front-hero__info">
+                            <b>Аскар Аскаров</b> оказываю юридическую помощью в Испании
+                        </div>
+    
+                        <ul class="front-hero__list">
+    
+                            <li class="front-hero__item">
+                                Оказываю юридическую помощь с 2015 года
+                            </li>
+    
+                            <li class="front-hero__item">
+                                Живу в городе Барселона
+                            </li>
+    
+                            <li class="front-hero__item">
+                                Более 70 успешных оформленных ВНЖ
+                            </li>
+    
+                            <li class="front-hero__item">
+                                Оказываю юридическую помощь с 2015 года
+                            </li>
+    
+                        </ul>
+    
+                        <div class="front-hero__small-contacts small-contacts">
+    
+                            <div class="small-contacts__wrap">
+    
+                                <img src="@/assets/img/icons/tel-wa.svg" alt="" class="small-contacts__icon">
+    
+                                <div class="small-contacts__text-wrap">
+                                    <div class="small-contacts__work-time">
+                                        Ежедневно с 10:00 до 22:00
+                                    </div>
+                                    <a href="#" class="small-contacts__tel">+7 969 349-33-26</a>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <form class="front-hero__form-main form-main">
+    
+                            <div class="form-main__group">
+    
+                                <label for="tel1" class="sr-only">Телефон</label>
+    
+                                <input type="tel" id="tel1" class="form-main__input">
+    
+                                <button class="form-main__submit">
+                                    Оставить заявку
+                                </button>
+    
+                            </div>
+    
+                            <div class="form-main__policy">
+                                Нажимая “Оставить заявку”, вы даете согласие на обработку <button class="form-main__btn-link">персональных данных</button> и ознакомлен с
+                                <button class="form-main__btn-link">политикой конфеденциальности.</button>
+                            </div>
+    
+                        </form>
+    
+                    </div>
+
+                </div>
+
+                {{> picture class="front-hero__img-wrap"
+                src="person.png" }}
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+{{> ./layout/footer }}
