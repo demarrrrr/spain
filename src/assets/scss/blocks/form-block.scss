@@ -5,6 +5,11 @@
         flex: 0 0 auto;
     }
 
+    &__vertical-title {
+        text-align: center;
+        margin-bottom: rem(30px);
+    }
+
     &__wrap {
         background: var(--accent-gradient);
         padding: rem(60px 0);
