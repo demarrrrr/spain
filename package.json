@@ -13,7 +13,7 @@
         "swiper": "^11.0.5"
     },
     "devDependencies": {
-        "@html-eslint/eslint-plugin": "^0.22.0",
+        "@html-eslint/eslint-plugin": "^0.23.1",
         "@html-eslint/parser": "^0.22.0",
         "@principalstudio/html-webpack-inject-preload": "^1.2.7",
         "@types/node": "^20.8.7",
