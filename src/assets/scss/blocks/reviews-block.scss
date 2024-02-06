@@ -1,0 +1,70 @@
+.reviews-block {
+    &__wrap {
+        padding: $pb 0;
+        background-image: url("@/assets/img/rev-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        width: fit-content;
+        max-width: rem(752px);
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: rem(30px);
+    }
+
+    &__subheading {
+        font-size: rem(18px);
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: rem(30px);
+        width: 100%;
+        max-width: rem(945px);
+    }
+
+    &__dec-icon {
+        display: block;
+        width: rem(30px);
+        height: rem(35px);
+        margin: 0 auto;
+        margin-bottom: rem(30px);
+    }
+}
+
+.reviews-slider {
+    overflow: hidden;
+
+    &__img {
+        border-radius: rem(16px);
+        width: 100%;
+        height: rem(482px);
+        object-fit: cover;
+    }
+}
+
+.reviews-slider__pagination {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: rem(10px);
+    margin: 0 auto;
+    margin-top: rem(30px);
+    width: fit-content;
+
+    .swiper-pagination-bullet {
+        border-radius: 3px;
+        width: rem(30px);
+        height: rem(5px);
+        display: block;
+        background: var(--accent-orange);
+        opacity: 0.2;
+        transition: 250ms;
+        cursor: pointer;
+    }
+
+    .swiper-pagination-bullet-active {
+        transition: 250ms;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,97 @@
+.faq-block {
+    &__wrap {
+        padding: $pb 0;
+        background: var(--accent-orange-light);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        width: fit-content;
+        max-width: rem(752px);
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: rem(30px);
+    }
+
+    &__subheading {
+        font-size: rem(18px);
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: rem(30px);
+        width: 100%;
+        max-width: rem(945px);
+    }
+
+    &__dec-icon {
+        display: block;
+        width: rem(30px);
+        height: rem(35px);
+        margin: 0 auto;
+        margin-bottom: rem(30px);
+    }
+
+    &__list {
+        @include unlist();
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(20px);
+    }
+
+    &__item {
+        background: $white;
+        border-radius: 16px;
+
+        &--active {
+            .faq-block__question {
+                border-bottom: 1px solid var(--border-light);
+
+                &::after {
+                    transform: rotate(180deg);
+                    transition: 250ms;
+                }
+            }
+
+            .faq-block__answer-wrap {
+                height: 100%;
+                max-height: rem(5000px);
+                transition: 250ms;
+            }
+        }
+    }
+
+    &__question {
+        padding: rem(26px 30px);
+        border-bottom: 1px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        gap: rem(10px);
+        width: 100%;
+        font-size: rem(18px);
+        font-weight: 500;
+
+        &::after {
+            content: "";
+            display: block;
+            width: rem(26px);
+            height: rem(26px);
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='11' viewBox='0 0 20 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10.2002C9.24169 10.2002 8.48335 9.90769 7.90919 9.33352L0.845855 2.27019C0.531688 1.95602 0.531688 1.43602 0.845855 1.12186C1.16002 0.807689 1.68002 0.807689 1.99419 1.12186L9.05752 8.18519C9.57752 8.70519 10.4225 8.70519 10.9425 8.18519L18.0059 1.12186C18.32 0.807689 18.84 0.807689 19.1542 1.12186C19.4684 1.43602 19.4684 1.95602 19.1542 2.27019L12.0909 9.33352C11.5167 9.90769 10.7584 10.2002 10 10.2002Z' fill='%23EA860B'/%3E%3C/svg%3E%0A");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: 250ms;
+        }
+    }
+
+    &__answer-wrap {
+        height: 0;
+        max-height: 0;
+        transition: 250ms;
+        overflow: hidden;
+    }
+
+    &__answer {
+        padding: rem(26px 30px);
+    }
+}

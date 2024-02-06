@@ -14,6 +14,8 @@ $container-max-widths: (
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/containers";
 @import "~sass-rem/rem";
+@import "swiper/css";
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
 @import "mixins/utility";
 @import "base/variables";
 @import "base/fonts";
@@ -32,3 +34,5 @@ $container-max-widths: (
 @import "blocks/form-block";
 @import "blocks/documents-block";
 @import "blocks/price-block";
+@import "blocks/reviews-block";
+@import "blocks/faq-block";
