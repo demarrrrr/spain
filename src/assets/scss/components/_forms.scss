@@ -6,6 +6,7 @@
     }
 
     &__group {
+        position: relative;
         display: flex;
         align-items: center;
         gap: rem(10px);
@@ -29,6 +30,7 @@
         background: var(--white);
         border-radius: 10px;
         border: 1px solid var(--border-light);
+        padding-left: rem(140px);
 
         &--long {
             max-width: rem(390px);
@@ -52,6 +54,102 @@
     &__btn-link {
         display: contents;
         font-weight: 500;
+    }
+
+    &__country-list {
+        @include unlist();
+
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: $white;
+        z-index: 1;
+        border-radius: 0 0 10px 10px;
+        height: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: 250ms;
+    }
+
+    &__country-item {
+        display: flex;
+        align-items: center;
+        gap: rem(10px);
+        transition: 250ms;
+        padding: rem(14px);
+        font-size: rem(14px);
+        cursor: pointer;
+
+        &:hover {
+            transition: 250ms;
+            background: var(--accent-orange-light);
+        }
+    }
+
+    &__info-block {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    &__country-icon {
+        display: block;
+        width: rem(40px);
+        height: rem(26px);
+        border-radius: 4px;
+        overflow: hidden;
+        object-fit: cover;
+        border: 1px solid var(--border-light);
+    }
+
+    &__tel-info-box {
+        position: absolute;
+        left: rem(14px);
+        height: rem(26px);
+        display: flex;
+        align-items: center;
+        gap: rem(10px);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding-right: rem(10px);
+        border-right: 1px solid var(--border-light);
+
+        svg {
+            transition: 250ms;
+        }
+    }
+
+    &__code {
+        font-size: rem(18px);
+    }
+
+    &__list-wrap {
+        position: relative;
+
+        &--show-list {
+            .form-main__input {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .form-main__country-list {
+                height: fit-content;
+                max-height: rem(5000px);
+                transition: 250ms;
+            }
+
+            .form-main__tel-info-box {
+                svg {
+                    transition: 250ms;
+                    transform: rotate(180deg);
+                }
+            }
+        }
     }
 }
 

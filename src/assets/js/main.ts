@@ -8,3 +8,4 @@ items.forEach((item) => {
         item.classList.toggle('faq-block__item--active')
     })  
 })
+

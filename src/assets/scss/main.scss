@@ -16,6 +16,7 @@ $container-max-widths: (
 @import "~sass-rem/rem";
 @import "swiper/css";
 @import "@fancyapps/ui/dist/fancybox/fancybox.css";
+@import "intl-tel-input/build/css/intlTelInput.css";
 @import "mixins/utility";
 @import "base/variables";
 @import "base/fonts";
@@ -31,7 +32,7 @@ $container-max-widths: (
 @import "layout/footer";
 @import "blocks/front-hero";
 @import "blocks/type-block";
-@import "blocks/form-block";
+@import "blocks/lead-block";
 @import "blocks/documents-block";
 @import "blocks/price-block";
 @import "blocks/reviews-block";

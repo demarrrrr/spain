@@ -4,7 +4,7 @@
 
 <main class="frontpage">
 
-    <section class="frontpage__front-hero front-hero">
+    <article class="frontpage__front-hero front-hero">
 
         <div class="front-hero__wrap">
 
@@ -56,7 +56,7 @@
                                     <div class="small-contacts__work-time">
                                         Ежедневно с 10:00 до 22:00
                                     </div>
-                                    <a href="#" class="small-contacts__tel">+7 969 349-33-26</a>
+                                    <a href="#" type="tel" class="small-contacts__tel">+7 969 349-33-26</a>
                                 </div>
 
                             </div>
@@ -67,9 +67,143 @@
 
                             <div class="form-main__group">
 
-                                <label for="tel1" class="sr-only">Телефон</label>
+                                <div class="form-main__list-wrap" data-tel-wrap>
+                                    <label for="tel1" class="sr-only">Телефон</label>
 
-                                <input type="tel" id="tel1" class="form-main__input">
+                                    <input type="tel" data-tel-input id="tel1" placeholder="(000)000-00-00" class="form-main__input">
+    
+                                    <button type="button" data-tel-toggle class="form-main__tel-info-box">
+                                        <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-icon-target>
+                                        <div class="form-main__tel-code" data-code-target>+7</div>
+                                        <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 5L12 0H0L6 5Z" fill="#2E2E2E"/>
+                                        </svg>                                        
+                                    </button>
+
+                                    <ul class="form-main__country-list">
+    
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code="(000)000-00-00">+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/am.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Armenia (Հայաստան)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code="00-000-000">+374</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/az.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Azerbaijan (Azərbaycan)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code="00-000-00-00">+994</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/by.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/kg.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/kz.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/md.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/sp.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/tj.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/ua.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+
+                                        <li class="form-main__country-item" data-tel-item>
+    
+                                            <img src="@/assets/img/flags/ua.svg" alt="" class="form-main__country-icon" data-tel-icon>
+                                            
+                                            <div class="form-main__name">Russia (Россия)</div>
+                                            
+                                            <div class="form-main__code" data-tel-code>+7</div>
+                                            
+                                        </li>
+    
+                                    </ul>
+                                </div>
 
                                 <button class="form-main__submit">
                                     Оставить заявку
@@ -96,9 +230,9 @@
 
         </div>
 
-    </section>
+    </article>
 
-    <section class="frontpage__types-block types-block">
+    <article class="frontpage__types-block types-block">
 
         <div class="types-block__wrap">
 
@@ -201,17 +335,17 @@
 
         </div>
 
-    </section>
+    </article>
 
-    <section class="frontpage__form-block form-block">
+    <article class="frontpage__lead-block lead-block">
 
-        <div class="form-block__wrap">
+        <div class="lead-block__wrap">
 
             <div class="container">
 
-                <div class="form-block__content">
+                <div class="lead-block__content">
 
-                    <h2 class="form-block__title">
+                    <h2 class="lead-block__title">
                         Записаться на бесплатную консультацию!
                     </h2>
 
@@ -242,9 +376,9 @@
 
         </div>
 
-    </section>
+    </article>
 
-    <section class="frontpage__documents-block documents-block">
+    <article class="frontpage__documents-block documents-block">
 
         <div class="documents-block__wrap">
 
@@ -298,9 +432,9 @@
 
         </div>
 
-    </section>
+    </article>
 
-    <section class="frontpage__price-list-block price-list-block">
+    <article class="frontpage__price-list-block price-list-block">
 
         <div class="price-list-block__wrap">
 
@@ -430,9 +564,9 @@
 
         </div>
 
-    </section>
+    </article>
 
-    <section class="frontpage__faq-block faq-block">
+    <article class="frontpage__faq-block faq-block">
 
         <div class="faq-block__wrap">
 
@@ -485,9 +619,9 @@
 
         </div>
 
-    </section>
+    </article>
 
-    <section class="frontpage__reviews-block reviews-block">
+    <article class="frontpage__reviews-block reviews-block">
 
         <div class="reviews-block__wrap">
 
@@ -517,9 +651,9 @@
 
                         <div class="swiper-slide">
 
-                            <a href="@/assets/img/placeholders/review1.jpg" data-fancybox class="reviews-slider__item">
-                                <img src="@/assets/img/placeholders/review1.jpg" alt="" class="reviews-slider__img">
-                            </a>
+                            <div data-fancybox class="reviews-slider__item">
+                                <img src="@/assets/img/placeholders/review1.jpg" alt="Отзыв1" class="reviews-slider__img">
+                            </div>
 
                         </div>
 
@@ -537,19 +671,19 @@
 
         </div>
 
-    </section>
+    </article>
 
-    <section class="frontpage__form-block form-block">
+    <article class="frontpage__lead-block lead-block">
 
-        <div class="form-block__wrap">
+        <div class="lead-block__wrap">
 
             <div class="container">
 
-                <h2 class="form-block__vertical-title">
+                <h2 class="lead-block__vertical-title">
                     Записаться на бесплатную консультацию!
                 </h2>
 
-                <div class="form-block__content">
+                <div class="lead-block__content">
 
                     <form class="front-hero__form-main form-main form-main--vertical">
 
@@ -579,9 +713,9 @@
 
         </div>
 
-    </section>
+    </article>
 
-    <section class="frontpage__contacts-block contacts-block">
+    <article class="frontpage__contacts-block contacts-block">
 
         <div class="contacts-block__wrap">
 
@@ -708,7 +842,7 @@
 
         </div>
 
-    </section>
+    </article>
 
 </main>
 
