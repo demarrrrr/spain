@@ -53,7 +53,7 @@
         "sass-loader": "^13.3.2",
         "sass-rem": "^4.0.0",
         "sharp": "^0.33.1",
-        "style-loader": "^3.3.3",
+        "style-loader": "^3.3.4",
         "stylelint": "^15.11.0",
         "stylelint-config-recommended": "^13.0.0",
         "stylelint-config-standard": "^34.0.0",
