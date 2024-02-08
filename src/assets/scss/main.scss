@@ -15,6 +15,7 @@ $container-max-widths: (
 @import "~bootstrap/scss/containers";
 @import "~sass-rem/rem";
 @import "swiper/css";
+@import "aos/dist/aos.css";
 @import "@fancyapps/ui/dist/fancybox/fancybox.css";
 @import "intl-tel-input/build/css/intlTelInput.css";
 @import "mixins/utility";

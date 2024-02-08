@@ -4,10 +4,10 @@
 page="Блог"}}
 
 <main class="blog-page">
-    <section class="blog-page__blog-block blog-block">
+    <article class="blog-page__blog-block blog-block">
         <div class="blog-block__wrap">
             <div class="container">
-                <h1 class="blog-block__heading">Статьи</h1>
+                <h2 class="blog-block__heading">Статьи</h2>
 
                 <div class="blog-block__subheading">
                     В ВНЖ Испании предоставляется несколько видов:
@@ -28,7 +28,7 @@ page="Блог"}}
 
                     <li class="blog-block__blog-card blog-card">
                         <a href="" class="blog-card__link">
-                            <article class="blog-card__body">
+                            <section class="blog-card__body">
                                 <div class="blog-card__border-wrap">
                                     {{> picture class="blog-card__img-wrap"
                                     src="placeholders/blog1.jpg" }}
@@ -38,8 +38,8 @@ page="Блог"}}
                                     Как получить гражданство Испании
                                 </h2>
 
-                                <time class="blog-card__date" datetime="2020-07-14">14 июля 2020</time>
-                            </article>
+                                <time class="blog-card__date" datetime="2020-07-14" itemprop="dateCreated") >14 июля 2020</time>
+                            </section>
                         </a>
                     </li>
 
@@ -84,7 +84,7 @@ page="Блог"}}
                 </div>
             </div>
         </div>
-    </section>
+    </article>
 </main>
 
 {{> ./layout/footer }}

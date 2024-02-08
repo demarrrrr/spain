@@ -11,6 +11,10 @@
         }
     }
 
+    &__wrap {
+        text-decoration: none;
+    }
+
     &__border-wrap {
         border-radius: rem(16px);
         box-shadow: 0 -1px 0 10px rgba(217 217 217 / 20%) inset;

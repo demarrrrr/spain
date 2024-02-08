@@ -1,25 +1,25 @@
 <nav class='{{prefix}}__breadcrumbs breadcrumbs' aria-label='breadcrumb'>
     <div class="breadcrumbs__wrap">
         <div class="container">
-            <ol class='breadcrumbs__list'>
-                <li class='breadcrumbs__item' aria-current='page'>
-                    <a class="breadcrumbs__link" href='#'>
+            <ol class='breadcrumbs__list' itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li class='breadcrumbs__item' itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a class="breadcrumbs__link" itemprop="item" typeof="WebPage" href="/" itemid="/"><span itemprop="name" href='#'>
                         Главная
                     </a>
                 </li>
                 {{#unless parent}}
-                <li class='breadcrumbs__item breadcrumbs__item--active' aria-current='page'>
+                <li class='breadcrumbs__item breadcrumbs__item--active'  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current='page'>
                     {{page}}
                 </li>
                 {{/unless}}
 
                 {{#if parent}}
-                <li class='breadcrumbs__item'>
-                    <a class="breadcrumbs__link" href='#'>
+                <li class='breadcrumbs__item' itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a class="breadcrumbs__link" itemprop="item" typeof="WebPage" href="/" itemid="/"><span itemprop="name" href='#'>
                         {{parent}}
                     </a>
                 </li>
-                <li class='breadcrumbs__item breadcrumbs__item--active' aria-current='page'>
+                <li class='breadcrumbs__item breadcrumbs__item--active' aria-current='page' itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                     {{page}}
                 </li>
                 {{/if}}

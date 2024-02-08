@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable import/no-extraneous-dependencies */
 import IMask from 'imask'
 
 const parents = document.querySelectorAll('[data-tel-wrap]')
@@ -43,7 +41,7 @@ parents.forEach((parent) => {
             parent.classList.remove('form-main__list-wrap--show-list')
 
             if (mainMask) {
-                input.setAttribute('placeholder', mainMask)
+                input.setAttribute('placeholder', mainMask.replaceAll('0', '_'))
             }
 
             if (mask.value) {

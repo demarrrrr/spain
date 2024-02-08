@@ -1,5 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import AOS from 'aos'
+
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 const html = document.documentElement
+
+AOS.init()
 
 /* FAQ toggles */
 

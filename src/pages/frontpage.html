@@ -14,9 +14,9 @@
 
                     <div class="front-hero__text-content">
 
-                        <h1 class="front-hero__heading">
+                        <h2 class="front-hero__heading">
                             ВНЖ Испании за месяц
-                        </h1>
+                        </h2>
 
                         <div class="front-hero__subheading">
                             Получи вид на жительство в Испании за месяца от 500 €
@@ -70,7 +70,7 @@
                                 <div class="form-main__list-wrap" data-tel-wrap>
                                     <label for="tel1" class="sr-only">Телефон</label>
 
-                                    <input type="tel" data-tel-input id="tel1" placeholder="(000)000-00-00" class="form-main__input">
+                                    <input type="tel" data-tel-input id="tel1"  placeholder="(___)___-__-__" class="form-main__input">
     
                                     <button type="button" data-tel-toggle class="form-main__tel-info-box">
                                         <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-icon-target>
@@ -211,11 +211,17 @@
 
                             </div>
 
-                            <div class="form-main__policy">
-                                Нажимая “Оставить заявку”, вы даете согласие на обработку <button
-                                    class="form-main__btn-link">персональных данных</button> и ознакомлен с
-                                <button class="form-main__btn-link">политикой конфеденциальности.</button>
+                            <div class="form-main__group form-main__group--checkbox">
+                                <input class="form-main__input" type="checkbox" name="pol1" id="pol1">
+                                <label for="pol1" class="form-main__label">
+                                    Нажимая “Оставить заявку”, вы даете согласие на обработку
+                                    <button data-modal="policy" class="form-main__btn-link">персональных данных</button> и
+                                    ознакомлен с
+                                    <button data-modal="policy" class="form-main__btn-link">политикой
+                                        конфеденциальности.</button>
+                                </label>
                             </div>
+        
 
                         </form>
 
@@ -283,14 +289,14 @@
 
                 <div class="types-block__content">
 
-                    <h2 class="types-block__title">
+                    <h2 class="types-block__title" data-aos="fade-up">
                         <span>Виды</span> ВНЖ
                     </h2>
 
-                    <div class="types-block__subheading">В ВНЖ Испании предоставляется несколько видов: инвестиционное,
+                    <div class="types-block__subheading" data-aos="fade-up">В ВНЖ Испании предоставляется несколько видов: инвестиционное,
                         рабочее, семейное и пенсионное. Каждый подходит для разных целей и категорий иностранцев.</div>
 
-                    <svg class="types-block__dec-icon" width="30" height="35" viewBox="0 0 30 35" fill="none"
+                    <svg class="types-block__dec-icon" data-aos="fade-up" width="30" height="35" viewBox="0 0 30 35" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M9.47367 8.72716C9.47367 4.51618 14.9393 0 14.9393 0C14.9393 0 20.5668 4.51618 20.5668 8.72716C20.5668 11.9851 19.2053 14.811 18.5739 15.9464C19.5605 14.5538 21.5873 13.6095 23.9676 13.6095C27.2874 13.6095 30 15.5318 30 17.9425C30 18.6138 29.4332 19.7124 29.0283 20.2921L27.0446 23.313C26.3968 22.184 24.8583 21.5737 23.0769 21.5737C20.6882 21.5737 18.7854 22.9469 18.7854 24.6557C18.7854 24.7754 18.7854 24.8893 18.7921 25H11.2691C11.2879 24.8893 11.2956 24.7754 11.2956 24.6557C11.2956 22.9469 9.31176 21.5737 6.9231 21.5737C5.14173 21.5737 3.60328 22.184 2.95551 23.313L0.971682 20.2921C0.566824 19.7124 0 18.6138 0 17.9425C0 15.5318 2.71255 13.6095 6.07287 13.6095C8.46085 13.6095 10.5155 14.5894 11.5107 16.0249C10.9011 14.9459 9.47367 12.063 9.47367 8.72716ZM10.335 29L7.32792 33.5048L11.6599 32.2232L14.9393 35L18.3401 32.2232L22.6721 33.5048L19.7022 29H10.335Z"
@@ -300,63 +306,67 @@
 
                     <ul class="types-block__list">
 
-                        {{# range 6}}
+                        {{# range 7}}
 
-                        <li class="types-block__type-card type-card">
+                        <li class="types-block__type-card type-card" data-aos="fade-up">
 
-                            <a href="" class="type-card__body">
+                            <a href="" class="type-card__wrap">
 
-                                <div class="type-card__border-wrap">
-                                    {{> picture class="type-card__img-wrap"
-                                    src="placeholders/type1.jpg" }}
-                                </div>
+                                <section class="type-card__body">
 
-                                <div class="type-card__name">Гражданский брак</div>
-
-                                <div class="type-card__category">Pareja de hecho</div>
-
-                                <p class="type-card__info">Надежный путь к легальному пребыванию в этой удивительной
-                                    стране. Испания предоставляет возможность иностранцам заключить гражданский брак с
-                                    испанцем или резидентом, что позволяет получить ВНЖ.</p>
-
-                                <div class="type-card__list-wrap">
-
-                                    <div class="type-card__list-name">
-                                        Плюсы:
+                                    <div class="type-card__border-wrap">
+                                        {{> picture class="type-card__img-wrap"
+                                        src="placeholders/type1.jpg" }}
+                                    </div>
+    
+                                    <div class="type-card__name">Гражданский брак</div>
+    
+                                    <div class="type-card__category">Pareja de hecho</div>
+    
+                                    <p class="type-card__info">Надежный путь к легальному пребыванию в этой удивительной
+                                        стране. Испания предоставляет возможность иностранцам заключить гражданский брак с
+                                        испанцем или резидентом, что позволяет получить ВНЖ.</p>
+    
+                                    <div class="type-card__list-wrap">
+    
+                                        <div class="type-card__list-name">
+                                            Плюсы:
+                                        </div>
+    
+                                        <ul class="type-card__list type-card__list--advantages">
+    
+                                            <li class="type-card__item">
+                                                Выдается на 5 лет
+                                            </li>
+    
+                                            <li class="type-card__item">
+                                                Выдается на 5 лет
+                                            </li>
+    
+                                        </ul>
+    
+    
+                                    </div>
+    
+                                    <div class="type-card__list-wrap">
+                                        <div class="type-card__list-name">
+                                            Минусы:
+                                        </div>
+    
+                                        <ul class="type-card__list type-card__list--disadvantages">
+    
+                                            <li class="type-card__item">
+                                                Срок оформления 3-4 месяца
+                                            </li>
+    
+                                            <li class="type-card__item">
+                                                Нахождение в стране 183 из 365 дней
+                                            </li>
+    
+                                        </ul>
                                     </div>
 
-                                    <ul class="type-card__list type-card__list--advantages">
-
-                                        <li class="type-card__item">
-                                            Выдается на 5 лет
-                                        </li>
-
-                                        <li class="type-card__item">
-                                            Выдается на 5 лет
-                                        </li>
-
-                                    </ul>
-
-
-                                </div>
-
-                                <div class="type-card__list-wrap">
-                                    <div class="type-card__list-name">
-                                        Минусы:
-                                    </div>
-
-                                    <ul class="type-card__list type-card__list--disadvantages">
-
-                                        <li class="type-card__item">
-                                            Срок оформления 3-4 месяца
-                                        </li>
-
-                                        <li class="type-card__item">
-                                            Нахождение в стране 183 из 365 дней
-                                        </li>
-
-                                    </ul>
-                                </div>
+                                </section>
 
                             </a>
 
@@ -374,7 +384,7 @@
 
     </article>
 
-    <article class="frontpage__lead-block lead-block">
+    <article class="frontpage__lead-block lead-block" data-aos="fade-up">
 
         <div class="lead-block__wrap">
 
@@ -393,7 +403,7 @@
                             <div class="form-main__list-wrap" data-tel-wrap>
                                 <label for="tel1" class="sr-only">Телефон</label>
 
-                                <input type="tel" data-tel-input id="tel2" placeholder="(000)000-00-00" class="form-main__input form-main__input--long">
+                                <input type="tel" data-tel-input id="tel2"  placeholder="(___)___-__-__" class="form-main__input form-main__input--long">
 
                                 <button type="button" data-tel-toggle class="form-main__tel-info-box">
                                     <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-icon-target>
@@ -534,11 +544,17 @@
 
                         </div>
 
-                        <div class="form-main__policy form-main__policy--main">
-                            Нажимая на “Бесплатная консультация” я даю согласие на обработку моих персональных данных (в
-                            соответствии с Федеральным законом №152-ФЗ «О персональных данных»)
+                        <div class="form-main__group form-main__group--checkbox">
+                            <input class="form-main__input" type="checkbox" name="pol3" id="pol3">
+                            <label for="pol3" class="form-main__label">
+                                Нажимая “Оставить заявку”, вы даете согласие на обработку
+                                <button data-modal="policy" class="form-main__btn-link">персональных данных</button> и
+                                ознакомлен с
+                                <button data-modal="policy" class="form-main__btn-link">политикой
+                                    конфеденциальности.</button>
+                            </label>
                         </div>
-
+    
                     </form>
 
                 </div>
@@ -557,13 +573,13 @@
 
                 <div class="documents-block__content">
 
-                    <h2 class="documents-block__title">
+                    <h2 class="documents-block__title" data-aos="fade-up">
                         Минимальный пакет документов для
                         получения
                         <span>ВНЖ Испании</span>
                     </h2>
 
-                    <svg class="types-block__dec-icon" width="30" height="35" viewBox="0 0 30 35" fill="none"
+                    <svg class="types-block__dec-icon" data-aos="fade-up" width="30" height="35" viewBox="0 0 30 35" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M9.47367 8.72716C9.47367 4.51618 14.9393 0 14.9393 0C14.9393 0 20.5668 4.51618 20.5668 8.72716C20.5668 11.9851 19.2053 14.811 18.5739 15.9464C19.5605 14.5538 21.5873 13.6095 23.9676 13.6095C27.2874 13.6095 30 15.5318 30 17.9425C30 18.6138 29.4332 19.7124 29.0283 20.2921L27.0446 23.313C26.3968 22.184 24.8583 21.5737 23.0769 21.5737C20.6882 21.5737 18.7854 22.9469 18.7854 24.6557C18.7854 24.7754 18.7854 24.8893 18.7921 25H11.2691C11.2879 24.8893 11.2956 24.7754 11.2956 24.6557C11.2956 22.9469 9.31176 21.5737 6.9231 21.5737C5.14173 21.5737 3.60328 22.184 2.95551 23.313L0.971682 20.2921C0.566824 19.7124 0 18.6138 0 17.9425C0 15.5318 2.71255 13.6095 6.07287 13.6095C8.46085 13.6095 10.5155 14.5894 11.5107 16.0249C10.9011 14.9459 9.47367 12.063 9.47367 8.72716ZM10.335 29L7.32792 33.5048L11.6599 32.2232L14.9393 35L18.3401 32.2232L22.6721 33.5048L19.7022 29H10.335Z"
@@ -575,9 +591,9 @@
 
                         {{# range 8}}
 
-                        <li class="documents-block__document-card document-card">
+                        <li class="documents-block__document-card document-card" data-aos="fade-up">
 
-                            <div class="document-card__body">
+                            <section class="document-card__body">
 
                                 <div class="document-card__header">
                                     <div class="document-card__name">Справка о не судимости с апостилем</div>
@@ -589,7 +605,7 @@
                                 <div class="document-card__info">Есть возможность получить находясь за границей от 100
                                     евро</div>
 
-                            </div>
+                            </section>
 
                         </li>
 
@@ -613,14 +629,14 @@
 
                 <div class="price-list-block__content">
 
-                    <h2 class="price-list-block__title">
+                    <h2 class="price-list-block__title" data-aos="fade-up">
                         <span>Прайс</span>-лист
                     </h2>
 
-                    <div class="price-list-block__subheading">Узнайте ответы на все интересующие вас вопросы о получении
+                    <div class="price-list-block__subheading" data-aos="fade-up">Узнайте ответы на все интересующие вас вопросы о получении
                         ВНЖ.</div>
 
-                    <svg class="price-list-block__dec-icon" width="30" height="35" viewBox="0 0 30 35" fill="none"
+                    <svg class="price-list-block__dec-icon" data-aos="fade-up" width="30" height="35" viewBox="0 0 30 35" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M9.47367 8.72716C9.47367 4.51618 14.9393 0 14.9393 0C14.9393 0 20.5668 4.51618 20.5668 8.72716C20.5668 11.9851 19.2053 14.811 18.5739 15.9464C19.5605 14.5538 21.5873 13.6095 23.9676 13.6095C27.2874 13.6095 30 15.5318 30 17.9425C30 18.6138 29.4332 19.7124 29.0283 20.2921L27.0446 23.313C26.3968 22.184 24.8583 21.5737 23.0769 21.5737C20.6882 21.5737 18.7854 22.9469 18.7854 24.6557C18.7854 24.7754 18.7854 24.8893 18.7921 25H11.2691C11.2879 24.8893 11.2956 24.7754 11.2956 24.6557C11.2956 22.9469 9.31176 21.5737 6.9231 21.5737C5.14173 21.5737 3.60328 22.184 2.95551 23.313L0.971682 20.2921C0.566824 19.7124 0 18.6138 0 17.9425C0 15.5318 2.71255 13.6095 6.07287 13.6095C8.46085 13.6095 10.5155 14.5894 11.5107 16.0249C10.9011 14.9459 9.47367 12.063 9.47367 8.72716ZM10.335 29L7.32792 33.5048L11.6599 32.2232L14.9393 35L18.3401 32.2232L22.6721 33.5048L19.7022 29H10.335Z"
@@ -628,13 +644,13 @@
                         <path d="M7 28H24V26H7V28Z" fill="#EA860B" />
                     </svg>
 
-                    <div class="price-list-block__list-name">Прайс-лист ВНЖ Испании</div>
+                    <div class="price-list-block__list-name" data-aos="fade-up">Прайс-лист ВНЖ Испании</div>
 
                     <ul class="price-list-block__list">
 
                         {{# range 3}}
 
-                        <li class="price-list-block__item">
+                        <li class="price-list-block__item" data-aos="fade-up">
 
                             <div class="price-list-block__item-row">
                                 <div class="price-list-block__info">
@@ -651,10 +667,10 @@
 
                         {{# range 3}}
 
-                        <li class="price-list-block__item">
+                        <li class="price-list-block__item" data-aos="fade-up">
 
                             <div class="price-list-block__item-row">
-                                <div class="price-list-block__info">
+                                <div class="price-list-block__info" data-aos="fade-up">
                                     ВНЖ по студенческой визе
                                 </div>
                                 <span class="price-list-block__price">600 €</span>
@@ -665,13 +681,13 @@
 
                     </ul>
 
-                    <div class="price-list-block__list-name">Оформления документов в Испании</div>
+                    <div class="price-list-block__list-name" data-aos="fade-up">Оформления документов в Испании</div>
 
-                    <ul class="price-list-block__list">
+                    <ul class="price-list-block__list" data-aos="fade-up">
 
                         {{# range 6}}
 
-                        <li class="price-list-block__item">
+                        <li class="price-list-block__item" data-aos="fade-up">
 
                             <div class="price-list-block__item-row">
                                 <div class="price-list-block__info">
@@ -688,13 +704,13 @@
 
                     </ul>
 
-                    <div class="price-list-block__list-name">Услуги на территории Испании</div>
+                    <div class="price-list-block__list-name" data-aos="fade-up">Услуги на территории Испании</div>
 
-                    <ul class="price-list-block__list">
+                    <ul class="price-list-block__list" data-aos="fade-up">
 
                         {{# range 4}}
 
-                        <li class="price-list-block__item">
+                        <li class="price-list-block__item" data-aos="fade-up">
 
                             <div class="price-list-block__item-row">
                                 <div class="price-list-block__info">
@@ -711,7 +727,7 @@
 
                     </ul>
 
-                    <button class="price-list-block__btn">
+                    <button data-modal="form" class="price-list-block__btn">
                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M13.2907 20H7.7093C2.65814 20 0.5 17.8419 0.5 12.7907V7.2093C0.5 2.15814 2.65814 0 7.7093 0H12.3605C12.7419 0 13.0581 0.316279 13.0581 0.697674C13.0581 1.07907 12.7419 1.39535 12.3605 1.39535H7.7093C3.42093 1.39535 1.89535 2.92093 1.89535 7.2093V12.7907C1.89535 17.0791 3.42093 18.6047 7.7093 18.6047H13.2907C17.5791 18.6047 19.1047 17.0791 19.1047 12.7907V8.13953C19.1047 7.75814 19.4209 7.44186 19.8023 7.44186C20.1837 7.44186 20.5 7.75814 20.5 8.13953V12.7907C20.5 17.8419 18.3419 20 13.2907 20Z"
@@ -745,14 +761,14 @@
 
                 <div class="faq-block__content">
 
-                    <h2 class="faq-block__title">
+                    <h2 class="faq-block__title" data-aos="fade-up">
                         Вопросы и <span>ответы</span>
                     </h2>
 
-                    <div class="faq-block__subheading">Узнайте ответы на все интересующие вас вопросы о получении ВНЖ.
+                    <div class="faq-block__subheading" data-aos="fade-up">Узнайте ответы на все интересующие вас вопросы о получении ВНЖ.
                     </div>
 
-                    <svg class="faq-block__dec-icon" width="30" height="35" viewBox="0 0 30 35" fill="none"
+                    <svg class="faq-block__dec-icon" width="30" data-aos="fade-up" height="35" viewBox="0 0 30 35" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M9.47367 8.72716C9.47367 4.51618 14.9393 0 14.9393 0C14.9393 0 20.5668 4.51618 20.5668 8.72716C20.5668 11.9851 19.2053 14.811 18.5739 15.9464C19.5605 14.5538 21.5873 13.6095 23.9676 13.6095C27.2874 13.6095 30 15.5318 30 17.9425C30 18.6138 29.4332 19.7124 29.0283 20.2921L27.0446 23.313C26.3968 22.184 24.8583 21.5737 23.0769 21.5737C20.6882 21.5737 18.7854 22.9469 18.7854 24.6557C18.7854 24.7754 18.7854 24.8893 18.7921 25H11.2691C11.2879 24.8893 11.2956 24.7754 11.2956 24.6557C11.2956 22.9469 9.31176 21.5737 6.9231 21.5737C5.14173 21.5737 3.60328 22.184 2.95551 23.313L0.971682 20.2921C0.566824 19.7124 0 18.6138 0 17.9425C0 15.5318 2.71255 13.6095 6.07287 13.6095C8.46085 13.6095 10.5155 14.5894 11.5107 16.0249C10.9011 14.9459 9.47367 12.063 9.47367 8.72716ZM10.335 29L7.32792 33.5048L11.6599 32.2232L14.9393 35L18.3401 32.2232L22.6721 33.5048L19.7022 29H10.335Z"
@@ -766,17 +782,24 @@
 
                     {{# range 14}}
 
-                    <li class="faq-block__item">
+                    <li class="faq-block__item" data-aos="fade-up">
 
                         <button class="faq-block__question">
                             Какую недвижимость следует приобрести в Испании, чтобы получить золотую визу Испании?
                         </button>
 
-                        <div class="faq-block__answer-wrap">
-                            <div class="faq-block__answer">
-                                После подачи всех необходимых документов в компетентный орган, решение обычно занимает
-                                около 20 дней. По итогам этой процедуры выдается положительное решение о выдаче золотой
-                                визы или отказе.
+                        <div class="faq-block__answer-wrap" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div class="faq-block__answer text-content" itemprop="text">
+                                <p>
+                                    После подачи всех необходимых документов в компетентный орган, решение обычно занимает
+                                    около 20 дней. По итогам этой процедуры выдается положительное решение о выдаче золотой
+                                    визы или отказе.    
+                                </p>
+                                <p>
+                                    После подачи всех необходимых документов в компетентный орган, решение обычно занимает
+                                    около 20 дней. По итогам этой процедуры выдается положительное решение о выдаче золотой
+                                    визы или отказе.
+                                </p>
                             </div>
                         </div>
 
@@ -798,15 +821,15 @@
 
             <div class="container">
 
-                <h2 class="reviews-block__title">
+                <h2 class="reviews-block__title" data-aos="fade-up">
                     <span>Отзывы</span> о нас
                 </h2>
 
-                <div class="reviews-block__subheading">Узнайте, что говорят клиенты о наших услугах по оформлению
+                <div class="reviews-block__subheading" data-aos="fade-up">Узнайте, что говорят клиенты о наших услугах по оформлению
                     временного пребывания в Испании.
                     Надежно и профессионально!</div>
 
-                <svg class="reviews-block__dec-icon" width="30" height="35" viewBox="0 0 30 35" fill="none"
+                <svg class="reviews-block__dec-icon" data-aos="fade-up" width="30" height="35" viewBox="0 0 30 35" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M9.47367 8.72716C9.47367 4.51618 14.9393 0 14.9393 0C14.9393 0 20.5668 4.51618 20.5668 8.72716C20.5668 11.9851 19.2053 14.811 18.5739 15.9464C19.5605 14.5538 21.5873 13.6095 23.9676 13.6095C27.2874 13.6095 30 15.5318 30 17.9425C30 18.6138 29.4332 19.7124 29.0283 20.2921L27.0446 23.313C26.3968 22.184 24.8583 21.5737 23.0769 21.5737C20.6882 21.5737 18.7854 22.9469 18.7854 24.6557C18.7854 24.7754 18.7854 24.8893 18.7921 25H11.2691C11.2879 24.8893 11.2956 24.7754 11.2956 24.6557C11.2956 22.9469 9.31176 21.5737 6.9231 21.5737C5.14173 21.5737 3.60328 22.184 2.95551 23.313L0.971682 20.2921C0.566824 19.7124 0 18.6138 0 17.9425C0 15.5318 2.71255 13.6095 6.07287 13.6095C8.46085 13.6095 10.5155 14.5894 11.5107 16.0249C10.9011 14.9459 9.47367 12.063 9.47367 8.72716ZM10.335 29L7.32792 33.5048L11.6599 32.2232L14.9393 35L18.3401 32.2232L22.6721 33.5048L19.7022 29H10.335Z"
@@ -814,7 +837,7 @@
                     <path d="M7 28H24V26H7V28Z" fill="#EA860B" />
                 </svg>
 
-                <div class="reviews-block__reviews-slider reviews-slider">
+                <div class="reviews-block__reviews-slider reviews-slider" data-aos="fade-up">
 
                     <div class="swiper-wrapper">
 
@@ -844,7 +867,7 @@
 
     </article>
 
-    <article class="frontpage__lead-block lead-block">
+    <article class="frontpage__lead-block lead-block" data-aos="fade-up">
 
         <div class="lead-block__wrap">
 
@@ -863,7 +886,7 @@
                             <div class="form-main__list-wrap" data-tel-wrap>
                                 <label for="tel8" class="sr-only">Телефон</label>
 
-                                <input type="tel" data-tel-input id="tel7" placeholder="(000)000-00-00" class="form-main__input form-main__input">
+                                <input type="tel" data-tel-input id="tel7"  placeholder="(___)___-__-__" class="form-main__input form-main__input--full">
 
                                 <button type="button" data-tel-toggle class="form-main__tel-info-box">
                                     <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-icon-target>
@@ -1004,11 +1027,17 @@
 
                         </div>
 
-                        <div class="form-main__policy form-main__policy--main">
-                            Нажимая на “Бесплатная консультация” я даю согласие на обработку моих персональных
-                            данных (в
-                            соответствии с Федеральным законом №152-ФЗ «О персональных данных»)
+                        <div class="form-main__group form-main__group--checkbox">
+                            <input class="form-main__input" type="checkbox" name="pol5" id="pol5">
+                            <label for="pol5" class="form-main__label">
+                                Нажимая “Оставить заявку”, вы даете согласие на обработку
+                                <button data-modal="policy" class="form-main__btn-link">персональных данных</button> и
+                                ознакомлен с
+                                <button data-modal="policy" class="form-main__btn-link">политикой
+                                    конфеденциальности.</button>
+                            </label>
                         </div>
+    
 
                     </form>
 
@@ -1028,11 +1057,11 @@
 
                 <div class="contacts-block__content">
 
-                    <h2 class="contacts-block__title">
+                    <h2 class="contacts-block__title" data-aos="fade-up">
                         Наши <span>контакты</span> 
                     </h2>
 
-                    <div class="contacts-block__subheading">Для предложений и жалоб, просто свяжитесь с нами любым удобным для вас способом.</div>
+                    <div class="contacts-block__subheading" data-aos="fade-up">Для предложений и жалоб, просто свяжитесь с нами любым удобным для вас способом.</div>
 
                     <svg class="contacts-block__dec-icon" width="30" height="35" viewBox="0 0 30 35" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -1042,11 +1071,11 @@
                         <path d="M7 28H24V26H7V28Z" fill="#EA860B" />
                     </svg>
 
-                    <div class="contacts-block__row">
+                    <div class="contacts-block__row" data-aos="fade-up">
 
                         <div class="contacts-block__text-wrap">
 
-                            <div class="contacts-block__small-socials small-socials">
+                            <div class="contacts-block__small-socials small-socials" data-aos="fade-up">
 
                                 <ul class="small-socials__list">
         
@@ -1078,7 +1107,7 @@
         
                             </div>
 
-                            <ul class="contacts-block__list">
+                            <ul class="contacts-block__list" data-aos="fade-up">
 
                                 <li class="contacts-block__item">
 
@@ -1106,7 +1135,7 @@
 
                             </ul>
                                 
-                            <form action="" class="contacts-block__contacts-form contacts-form">
+                            <form action="" class="contacts-block__contacts-form contacts-form" data-aos="fade-up">
 
                                 <div class="contacts-form__name">
                                     Или оставьте заявку:
@@ -1117,7 +1146,7 @@
                                     <div class="contacts-form__form-main form-main__list-wrap" data-tel-wrap>
                                         <label for="tel6" class="sr-only">Телефон</label>
         
-                                        <input type="tel" data-tel-input id="tel6" placeholder="(000)000-00-00" class="form-main__input form-main__input--full">
+                                        <input type="tel" data-tel-input id="tel6"  placeholder="(___)___-__-__" class="form-main__input form-main__input--full">
         
                                         <button type="button" data-tel-toggle class="form-main__tel-info-box">
                                             <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-icon-target>
@@ -1258,16 +1287,23 @@
                                     Оставить заявку
                                 </button>
 
-                                <div class="contacts-form__policy">
-                                    Нажимая “Оставить заявку”, вы даете согласие на
-                                    <button class="contacts-form__btn-link">обработку персональных данных.</button>
+                                <div class="form-main__group form-main__group--checkbox">
+                                    <input class="form-main__input" type="checkbox" name="pol4" id="pol4">
+                                    <label for="pol4" class="form-main__label">
+                                        Нажимая “Оставить заявку”, вы даете согласие на обработку
+                                        <button data-modal="policy" class="form-main__btn-link">персональных данных</button> и
+                                        ознакомлен с
+                                        <button data-modal="policy" class="form-main__btn-link">политикой
+                                            конфеденциальности.</button>
+                                    </label>
                                 </div>
+            
 
                             </form>
                             
                         </div>
 
-                        <div class="contacts-block__map">
+                        <div class="contacts-block__map" data-aos="fade-up">
                             <img src="@/assets/img/placeholders/map-placeholder.jpg" alt="">
                         </div>
 

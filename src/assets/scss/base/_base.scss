@@ -25,6 +25,19 @@ body {
     line-height: 145%;
 }
 
+main {
+    padding-top: 162px;
+
+    @include media-breakpoint-down(xxl) {
+        padding-top: 126px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 68px;
+    }
+
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
