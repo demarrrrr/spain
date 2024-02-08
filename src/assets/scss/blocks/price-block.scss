@@ -1,6 +1,10 @@
 .price-list-block {
     &__wrap {
         margin-bottom: $pb;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: $pb-mobile;
+        }
     }
 
     &__title {

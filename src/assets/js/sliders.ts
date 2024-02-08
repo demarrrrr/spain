@@ -8,12 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
     new Swiper(reviewSlider, {
         modules: [Pagination],
-        slidesPerView: 5,
-        spaceBetween: 25,
+        slidesPerView: 1,
+        spaceBetween: 20,
         pagination: {
             el: '.reviews-slider__pagination',
             clickable: true,
         },
+
+        breakpoints: {
+            1200: {
+                slidesPerView: 5,
+                spaceBetween: 25,
+            },
+
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+            },
+
+            579: {
+                slidesPerView: 1,
+                spaceBetween: 25,
+            }
+        }
     })
 })
 

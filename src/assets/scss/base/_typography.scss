@@ -1,12 +1,24 @@
 h1 {
     font-weight: 700;
     font-size: rem(42px);
+
+    @include media-breakpoint-down(xxl) {
+        font-size: rem(36px);
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: rem(28px);
+    }
 }
 
 h2 {
     font-size: rem(38px);
     font-weight: 700;
     line-height: 145%;
+
+    @include media-breakpoint-down(xxl) {
+        font-size: rem(20px);
+    }
 
     span {
         color: var(--accent-orange);

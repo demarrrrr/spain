@@ -1,0 +1,172 @@
+.single-page {
+    &__wrap {
+        padding-bottom: $pb;
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: $pb-mobile;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: rem(30px);
+        }
+    }
+
+    &__heading {
+        font-size: rem(38px);
+        font-weight: 700;
+        line-height: 145%;
+        margin-bottom: rem(20px);
+
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(20px);
+        }
+
+        span {
+            color: var(--accent-orange);
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        opacity: 0.5;
+        margin-bottom: rem(40px);
+        font-size: rem(18px);
+        gap: rem(20px);
+
+        @include media-breakpoint-down(lg) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr;
+        gap: rem(40px);
+        margin-bottom: rem(40px);
+
+        @include media-breakpoint-down(xxl) {
+            margin-bottom: rem(20px);
+            gap: rem(20px);
+        }
+
+        @include media-breakpoint-down(lg) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__img-wrap {
+        width: 100%;
+        height: rem(470px);
+        display: block;
+        border-radius: 16px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        @include media-breakpoint-down(md) {
+            height: rem(320px);
+        }
+    }
+
+    &__nav-list {
+        @include unlist();
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(30px);
+        list-style: none;
+        counter-reset: item;
+    }
+
+    &__nav-item {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: counters(item, ".", decimal-leading-zero);
+            counter-increment: item;
+            margin-right: rem(10px);
+            font-weight: 500;
+            font-size: rem(18px);
+        }
+    }
+
+    &__nav-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: rem(18px);
+    }
+
+    &__info-wrap {
+        padding: rem(30px);
+        border-radius: 16px;
+        background: var(--accent-orange-light);
+    }
+
+    &__nav-name {
+        font-weight: 500;
+        padding-bottom: rem(30px);
+        margin-bottom: rem(30px);
+        border-bottom: 1px solid var(--accent-orange);
+    }
+}
+
+.text-content {
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: rem(30px);
+        padding-left: rem(60px);
+        border-radius: 16px;
+        background: var(--accent-orange-light);
+        margin-bottom: rem(40px);
+        gap: rem(5px);
+
+        @include media-breakpoint-down(lg) {
+            padding-left: rem(40px);
+        }
+    }
+
+    li {
+        font-size: rem(18px);
+    }
+
+    p {
+        font-size: rem(18px);
+        margin-bottom: rem(40px);
+    }
+
+    h2 {
+        font-size: rem(28px);
+        line-height: 140%;
+        margin-bottom: rem(40px);
+    }
+
+    blockquote {
+        font-size: rem(18px);
+        line-height: 170%;
+        padding: rem(30px);
+        border-radius: 16px;
+        background: var(--accent-orange-light);
+        margin-bottom: rem(40px);
+
+        &::before {
+            content: "";
+            display: block;
+            font-size: rem(60px);
+            width: rem(20px);
+            height: rem(14px);
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.2389 14V8.13043C11.2389 2.3913 14.1593 0.130436 19.4248 0L20 2.73913C16.8584 3.04348 15.4425 4.47826 15.6637 7.04348H18.4071V14H11.2389ZM0 14V8.13043C0 2.3913 2.92035 0.130436 8.18584 0L8.76106 2.73913C5.61947 3.04348 4.20354 4.47826 4.42478 7.04348H7.16814V14H0Z' fill='%23EA860B'/%3E%3C/svg%3E%0A");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: rem(20px);
+        }
+    }
+}

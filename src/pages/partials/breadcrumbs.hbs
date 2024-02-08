@@ -1,32 +1,29 @@
 <nav class='{{prefix}}__breadcrumbs breadcrumbs' aria-label='breadcrumb'>
-    <ol class='breadcrumbs__list'>
-        <li class='breadcrumbs__item'>
-            <a class='breadcrumbs__link' href='#'>
-                Главная
-            </a>
-        </li>
+    <div class="breadcrumbs__wrap">
+        <div class="container">
+            <ol class='breadcrumbs__list'>
+                <li class='breadcrumbs__item' aria-current='page'>
+                    <a class="breadcrumbs__link" href='#'>
+                        Главная
+                    </a>
+                </li>
+                {{#unless parent}}
+                <li class='breadcrumbs__item breadcrumbs__item--active' aria-current='page'>
+                    {{page}}
+                </li>
+                {{/unless}}
 
-        {{#if page}}
-            <li
-                class='breadcrumbs__item breadcrumbs__item--active'
-                aria-current='page'
-            >
-                {{page}}
-            </li>
-        {{/if}}
-
-        {{#if parent}}
-            <li class='breadcrumbs__item'>
-                <a href='#'>
-                    {{parent}}
-                </a>
-            </li>
-            <li
-                class='breadcrumbs__item breadcrumbs__item--active'
-                aria-current='page'
-            >
-                {{page}}
-            </li>
-        {{/if}}
-    </ol>
+                {{#if parent}}
+                <li class='breadcrumbs__item'>
+                    <a class="breadcrumbs__link" href='#'>
+                        {{parent}}
+                    </a>
+                </li>
+                <li class='breadcrumbs__item breadcrumbs__item--active' aria-current='page'>
+                    {{page}}
+                </li>
+                {{/if}}
+            </ol>
+        </div>
+    </div>
 </nav>

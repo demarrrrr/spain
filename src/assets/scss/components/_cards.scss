@@ -5,6 +5,10 @@
         flex-direction: column;
         gap: rem(20px);
         height: 100%;
+
+        @include media-breakpoint-down(lg) {
+            gap: rem(16px);
+        }
     }
 
     &__border-wrap {
@@ -26,6 +30,10 @@
             object-fit: cover;
             border-radius: rem(16px);
         }
+
+        @include media-breakpoint-down(sm) {
+            height: rem(270px);
+        }
     }
 
     &__name {
@@ -36,10 +44,19 @@
     &__category {
         color: var(--accent-orange);
         font-size: rem(18px);
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(16px);
+        }
     }
 
     &__info {
         font-size: rem(18px);
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(16px);
+        }
     }
 
     &__list-name {
@@ -105,8 +122,9 @@
 
     &__header {
         display: flex;
-        gap: rem(30px);
+        gap: rem(10px);
         margin-bottom: rem(20px);
+        justify-content: space-between;
     }
 
     &__name {
@@ -131,5 +149,83 @@
         font-weight: 500;
         font-size: rem(18px);
         background: var(--accent-gradient);
+    }
+}
+
+.blog-card {
+    &__link {
+        text-decoration: none;
+        display: block;
+    }
+
+    &__body {
+        height: 100%;
+
+        @include media-breakpoint-down(lg) {
+            gap: rem(16px);
+        }
+    }
+
+    &__border-wrap {
+        border-radius: rem(16px);
+        box-shadow: 0 -1px 0 10px rgba(217 217 217 / 20%) inset;
+    }
+
+    &__img-wrap {
+        display: block;
+        width: 100%;
+        height: rem(290px);
+        border-radius: rem(16px);
+        position: relative;
+        z-index: -1;
+        margin-bottom: rem(20px);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: rem(16px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            height: rem(270px);
+        }
+    }
+
+    &__title {
+        font-size: rem(24px);
+        line-height: 145%;
+    }
+
+    &__info {
+        font-size: rem(18px);
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(16px);
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding-left: rem(30px);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: block;
+            width: rem(20px);
+            height: rem(20px);
+            background-size: contain;
+        }
+    }
+
+    &__date {
+        font-size: rem(18px);
+        opacity: 0.5;
     }
 }

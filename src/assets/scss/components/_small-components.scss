@@ -17,6 +17,10 @@
         font-size: rem(24px);
         text-decoration: none;
         line-height: 140%;
+
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(20px);
+        }
     }
 
     &__work-time {
@@ -31,6 +35,10 @@
             height: 6px;
             display: block;
             background-color: var(--accent-green);
+        }
+
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(12px);
         }
     }
 }
@@ -49,6 +57,50 @@
             width: rem(46px);
             height: rem(46px);
             display: block;
+            object-fit: contain;
+
+            @include media-breakpoint-down(xxl) {
+                width: rem(36px);
+                height: rem(36px);
+            }
         }
+    }
+}
+
+.custom-pagination {
+    &__list {
+        @include unlist();
+
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: rem(50px);
+        margin-bottom: rem(20px);
+        gap: rem(40px);
+    }
+
+    &__total {
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+        opacity: 0.5;
+        font-size: rem(18px);
+    }
+
+    &__arrow {
+        width: rem(70px);
+        height: rem(70px);
+        border: 1px solid var(--accent-orange);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: rem(16px);
+    }
+
+    &__link {
+        padding: rem(0 10px);
+        font-size: rem(24px);
+        text-decoration: none;
     }
 }

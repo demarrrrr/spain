@@ -11,33 +11,67 @@
         align-items: center;
         gap: rem(10px);
         margin-bottom: rem(20px);
+
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
     &__submit {
         @extend %btn-main;
 
         font-size: rem(16px);
+
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(14px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     &__submit-border {
         @extend %btn-border;
+
+        @include media-breakpoint-down(md) {
+            max-width: 100%;
+        }
     }
 
     &__input {
         width: 100%;
-        max-width: rem(370px);
         padding: rem(20px);
         background: var(--white);
         border-radius: 10px;
         border: 1px solid var(--border-light);
         padding-left: rem(140px);
+        max-width: rem(370px);
+
+        @include media-breakpoint-down(xxl) {
+            max-width: rem(320px);
+        }
 
         &--long {
             max-width: rem(390px);
+
+            @include media-breakpoint-down(xxl) {
+                max-width: 100%;
+                width: 100%;
+            }
         }
 
         &--full {
             max-width: 100%;
+        }
+
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+            width: 100%;
         }
     }
 
@@ -150,6 +184,11 @@
                 }
             }
         }
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 }
 
@@ -184,6 +223,13 @@
 
     &__submit-border {
         @extend %btn-border;
+
+        max-width: 100%;
+
+        @include media-breakpoint-down(lg) {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     &__input {
@@ -211,5 +257,9 @@
     &__btn-link {
         text-decoration: underline;
         color: var(--accent-orange);
+    }
+
+    .form-main__list-wrap {
+        width: 100%;
     }
 }

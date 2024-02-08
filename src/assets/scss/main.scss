@@ -28,6 +28,7 @@ $container-max-widths: (
 @import "components/small-components";
 @import "components/forms";
 @import "components/cards";
+@import "components/breadcrumbs";
 @import "layout/header";
 @import "layout/footer";
 @import "blocks/front-hero";
@@ -38,3 +39,5 @@ $container-max-widths: (
 @import "blocks/reviews-block";
 @import "blocks/faq-block";
 @import "blocks/contacts-block";
+@import "blocks/blog-block";
+@import "pages/single-page";

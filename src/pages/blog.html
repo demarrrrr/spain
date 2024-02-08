@@ -1,0 +1,90 @@
+<!-- Название страницы:Блог -->
+
+{{> ./layout/header title='Блог' }} {{> breadcrumbs prefix="breadcrumbs"
+page="Блог"}}
+
+<main class="blog-page">
+    <section class="blog-page__blog-block blog-block">
+        <div class="blog-block__wrap">
+            <div class="container">
+                <h1 class="blog-block__heading">Статьи</h1>
+
+                <div class="blog-block__subheading">
+                    В ВНЖ Испании предоставляется несколько видов:
+                    инвестиционное, рабочее, семейное и пенсионное. Каждый
+                    подходит для разных целей и категорий иностранцев.
+                </div>
+
+                <svg class="types-block__dec-icon" width="30" height="35" viewBox="0 0 30 35" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.47367 8.72716C9.47367 4.51618 14.9393 0 14.9393 0C14.9393 0 20.5668 4.51618 20.5668 8.72716C20.5668 11.9851 19.2053 14.811 18.5739 15.9464C19.5605 14.5538 21.5873 13.6095 23.9676 13.6095C27.2874 13.6095 30 15.5318 30 17.9425C30 18.6138 29.4332 19.7124 29.0283 20.2921L27.0446 23.313C26.3968 22.184 24.8583 21.5737 23.0769 21.5737C20.6882 21.5737 18.7854 22.9469 18.7854 24.6557C18.7854 24.7754 18.7854 24.8893 18.7921 25H11.2691C11.2879 24.8893 11.2956 24.7754 11.2956 24.6557C11.2956 22.9469 9.31176 21.5737 6.9231 21.5737C5.14173 21.5737 3.60328 22.184 2.95551 23.313L0.971682 20.2921C0.566824 19.7124 0 18.6138 0 17.9425C0 15.5318 2.71255 13.6095 6.07287 13.6095C8.46085 13.6095 10.5155 14.5894 11.5107 16.0249C10.9011 14.9459 9.47367 12.063 9.47367 8.72716ZM10.335 29L7.32792 33.5048L11.6599 32.2232L14.9393 35L18.3401 32.2232L22.6721 33.5048L19.7022 29H10.335Z"
+                        fill="#EA860B" />
+                    <path d="M7 28H24V26H7V28Z" fill="#EA860B" />
+                </svg>
+
+                <ul class="blog-block__list">
+                    {{# range 12}}
+
+                    <li class="blog-block__blog-card blog-card">
+                        <a href="" class="blog-card__link">
+                            <article class="blog-card__body">
+                                <div class="blog-card__border-wrap">
+                                    {{> picture class="blog-card__img-wrap"
+                                    src="placeholders/blog1.jpg" }}
+                                </div>
+
+                                <h2 class="blog-card__title">
+                                    Как получить гражданство Испании
+                                </h2>
+
+                                <time class="blog-card__date" datetime="2020-07-14">14 июля 2020</time>
+                            </article>
+                        </a>
+                    </li>
+
+                    {{/ range }}
+                </ul>
+
+                <div class="blog-block__custom-pagination custom-pagination">
+                    <nav class="custom-pagination__nav">
+                        <ul class="custom-pagination__list">
+                            <li class="custom-pagination__item custom-pagination__item--disabled">
+                                <a href="" class="custom-pagination__arrow custom-pagination__arrow--prev">
+                                    <svg width="11" height="22" viewBox="0 0 11 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.8625 21.8375C10.1 21.8375 10.3375 21.75 10.525 21.5625C10.8875 21.2 10.8875 20.6 10.525 20.2375L2.375 12.0875C1.775 11.4875 1.775 10.5125 2.375 9.91252L10.525 1.76252C10.8875 1.40002 10.8875 0.800024 10.525 0.437524C10.1625 0.0750244 9.5625 0.0750244 9.2 0.437524L1.05 8.58752C0.412499 9.22502 0.0499992 10.0875 0.0499992 11C0.0499992 11.9125 0.399999 12.775 1.05 13.4125L9.2 21.5625C9.3875 21.7375 9.625 21.8375 9.8625 21.8375Z"
+                                            fill="#EA860B" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="custom-pagination__item">
+                                <a href="" class="custom-pagination__link">
+                                    1
+                                </a>
+                            </li>
+                            <li class="custom-pagination__item custom-pagination__item--disabled">
+                                <a href=""
+                                    class="custom-pagination__link custom-pagination__arrow custom-pagination__arrow--next">
+                                    <svg width="11" height="22" viewBox="0 0 11 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.1375 21.8375C0.9 21.8375 0.6625 21.75 0.475 21.5625C0.1125 21.2 0.1125 20.6 0.475 20.2375L8.625 12.0875C9.225 11.4875 9.225 10.5125 8.625 9.91252L0.475 1.76252C0.1125 1.40002 0.1125 0.800024 0.475 0.437524C0.8375 0.0750244 1.4375 0.0750244 1.8 0.437524L9.95 8.58752C10.5875 9.22502 10.95 10.0875 10.95 11C10.95 11.9125 10.6 12.775 9.95 13.4125L1.8 21.5625C1.6125 21.7375 1.375 21.8375 1.1375 21.8375Z"
+                                            fill="#EA860B" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="custom-pagination__total">
+                            Всего 12 страниц
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{{> ./layout/footer }}

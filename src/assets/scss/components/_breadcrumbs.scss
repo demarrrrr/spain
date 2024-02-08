@@ -1,21 +1,53 @@
 .breadcrumbs {
+    &__wrap {
+        background: var(--accent-orange-light);
+        margin-bottom: rem(60px);
+    }
+
     &__list {
         @include unlist();
 
         display: flex;
         align-items: center;
+        padding: rem(30px 0);
+        gap: rem(40px);
+
+        @include media-breakpoint-down(lg) {
+            flex-wrap: wrap;
+            gap: rem(20px);
+        }
     }
 
     &__item {
         display: flex;
         align-items: center;
+        gap: rem(40px);
+        font-weight: 500;
+
+        &--active {
+            opacity: 0.3;
+            text-transform: uppercase;
+        }
+
+        &:not(.breadcrumbs__item--active) {
+            &::after {
+                content: "";
+                width: 14px;
+                height: 14px;
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 6.97571C15 6.97571 13.1935 4.78947 11.5091 4.78947C9.81254 4.78947 8.40886 5.71255 8.40886 5.71255C9.08018 5.37247 9.55621 4.48178 9.55621 3.42915C9.55621 2.08502 8.78727 1 7.82301 1C7.55448 1 7.11505 1.22673 6.88314 1.38867L5.67479 2.1822C6.1264 2.44131 6.37052 3.05669 6.37052 3.76924C6.37052 4.72471 5.82125 5.51823 5.13773 5.51823C5.02788 5.51823 4.93023 5.50202 4.83259 5.45344L4.82041 3.47773L3.56322 3.47773L3.56322 5.24293L1.59807 3.93117L2.11073 5.66397L0.999999 6.97571L2.11073 8.33603L1.59807 10.0688L3.56321 8.77328L3.56321 10.5223L4.82041 10.5223L4.83259 8.54656C4.93023 8.51417 5.02788 8.51416 5.13773 8.51416C5.82125 8.51417 6.37052 9.27529 6.37052 10.2308C6.37052 10.9433 6.1264 11.5587 5.67479 11.8178L6.88314 12.6113C7.11505 12.7733 7.55448 13 7.82301 13C8.78727 13 9.55621 11.915 9.55621 10.587C9.55621 9.51821 9.08018 8.62754 8.40886 8.30366C8.40886 8.30366 9.81253 9.22672 11.5091 9.22672C13.1935 9.22672 15 6.97571 15 6.97571Z' fill='%23FFC400' stroke='%232E2E2E' stroke-width='0.2' stroke-linejoin='round'/%3E%3Cpath d='M3.56324 3.47778L3.56324 10.5385L4.82043 10.5385L4.82043 3.47778L3.56324 3.47778Z' fill='%23FFC400' stroke='%232E2E2E' stroke-width='0.2'/%3E%3C/svg%3E%0A");
+            }
+        }
     }
 
     &__link {
-        color: inherit;
+        text-decoration: none;
+        transition: 250ms;
+        text-transform: uppercase;
 
         &:hover {
+            transition: 250ms;
             text-decoration: none;
+            color: var(--main);
         }
     }
 }

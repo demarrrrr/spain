@@ -4,6 +4,14 @@
         background-image: url("@/assets/img/rev-bg.jpg");
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include media-breakpoint-down(md) {
+            padding: $pb-mobile 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: rem(30px) 0;
+        }
     }
 
     &__title {
@@ -40,6 +48,23 @@
         width: 100%;
         height: rem(482px);
         object-fit: cover;
+
+        @include media-breakpoint-down(md) {
+            height: rem(432px);
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        overflow: visible;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: rem(250px);
+        margin: 0 auto;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: rem(220px);
     }
 }
 

@@ -1,6 +1,10 @@
 .documents-block {
     &__wrap {
         margin-bottom: $pb;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: $pb-mobile;
+        }
     }
 
     &__title {
@@ -36,5 +40,13 @@
 
     &__document-card {
         width: calc(33% - 20px);
+
+        @include media-breakpoint-down(lg) {
+            width: calc(50% - 20px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: calc(100%);
+        }
     }
 }
