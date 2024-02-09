@@ -14,6 +14,10 @@
         @include media-breakpoint-down(xxl) {
             max-width: rem(520px);
         }
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
     }
 
     &__wrap {
@@ -32,6 +36,8 @@
     &__heading {
         margin-bottom: rem(20px);
         font-size: rem(42px);
+        line-height: 120%;
+        text-transform: uppercase;
 
         @include media-breakpoint-down(xxl) {
             font-size: rem(36px);
@@ -42,7 +48,12 @@
         }
 
         @include media-breakpoint-down(md) {
-            font-size: rem(28px);
+            font-size: rem(32px);
+        }
+
+        @include media-breakpoint-down(xs) {
+            font-size: rem(26px);
+            margin-bottom: rem(10px);
         }
     }
 
@@ -52,7 +63,6 @@
         font-weight: 500;
         font-size: rem(24px);
         margin-bottom: rem(30px);
-        text-shadow: 0 4px 4px #bfbfbf;
         line-height: 140%;
 
         @include media-breakpoint-down(xxl) {
@@ -61,6 +71,7 @@
 
         @include media-breakpoint-down(lg) {
             font-size: rem(20px);
+            margin-bottom: rem(20px);
         }
 
         @include media-breakpoint-down(md) {
@@ -211,8 +222,15 @@
             object-fit: contain;
         }
 
+        @include media-breakpoint-down(md) {
+            width: rem(370px);
+            height: rem(370px);
+            right: rem(-110px);
+        }
+
         @include media-breakpoint-down(sm) {
             position: relative;
+            right: 0;
             margin-bottom: rem(20px);
             height: rem(320px);
             width: 100%;

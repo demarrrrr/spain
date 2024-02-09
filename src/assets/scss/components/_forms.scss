@@ -137,6 +137,12 @@
             max-width: rem(320px);
         }
 
+        @include media-breakpoint-down(lg) {
+            padding: rem(18px 12px);
+            padding-left: rem(130px);
+            max-width: 100%;
+        }
+
         &--long {
             max-width: rem(390px);
 
@@ -252,6 +258,12 @@
     &__list-wrap {
         position: relative;
 
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+            width: 100%;
+            flex-grow: 1;
+        }
+
         &--show-list {
             .form-main__input {
                 border-radius: 10px 10px 0 0;
@@ -287,11 +299,6 @@
                     transform: rotate(180deg);
                 }
             }
-        }
-
-        @include media-breakpoint-down(sm) {
-            max-width: 100%;
-            width: 100%;
         }
     }
 

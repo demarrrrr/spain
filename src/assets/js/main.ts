@@ -62,7 +62,7 @@ const initMobileMenuInteractions = () => {
     /* close menu on document click */
     document.addEventListener('click', (e) => {
         if (!isMenuOpened) return
-        
+
         if (!mobileMenuWrap.contains(e.target as HTMLElement)) {
             header?.classList.remove('header--active')
             document.documentElement.classList.remove('locked')
@@ -86,10 +86,19 @@ const initMobileMenuInteractions = () => {
     })
 }
 
+const initBodyPadding = () => {
+    const header = document.querySelector('.header') as HTMLElement | undefined
+
+    if (!header) return
+
+    document.body.style.paddingTop = `${header.offsetHeight}px`
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init()
 
     initFaqToggles()
     initMobileMenuInteractions()
     initUrlAnchor()
+    initBodyPadding()
 })
