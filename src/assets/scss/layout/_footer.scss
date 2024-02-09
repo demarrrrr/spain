@@ -45,6 +45,7 @@
     &__logo-wrap {
         display: flex;
         align-items: center;
+        text-decoration: none;
 
         @include media-breakpoint-down(xl) {
             order: 0;

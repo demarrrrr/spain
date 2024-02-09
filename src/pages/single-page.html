@@ -2,11 +2,10 @@
 
 {{> ./layout/header title='Простая страница' }}
 
-{{> breadcrumbs prefix="breadcrumbs"
-parent="Блог"  page="лучшие регионы испании для жизни и отдыха"}}
-
-
 <main class="single-page">
+
+    {{> breadcrumbs prefix="breadcrumbs"
+    parent="Блог"  page="лучшие регионы испании для жизни и отдыха"}}
 
     <article class="single-page__wrap">
 
@@ -195,7 +194,7 @@ parent="Блог"  page="лучшие регионы испании для жи�
 
                                 <button type="button" data-tel-toggle class="form-main__tel-info-box">
                                     <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-icon-target>
-                                    <div class="form-main__tel-code" data-code-target>+7</div>
+                                    <span class="form-main__tel-code" data-code-target>+7</span>
                                     <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 5L12 0H0L6 5Z" fill="#2E2E2E"/>
                                     </svg>                                        

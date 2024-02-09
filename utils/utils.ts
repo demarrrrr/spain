@@ -7,7 +7,7 @@ import HtmlWebpackInjectPreload from '@principalstudio/html-webpack-inject-prelo
 import environment from '../configuration/webpack.environment'
 import data from '../src/pages/data/data.json'
 
-import { graveyardTemplate } from './generateGrave'
+import { listTemplate } from './generateList'
 
 export const fileNameGenerator = (filename: string) => {
     const relPath = filename.split(/[\\/]/)
@@ -27,14 +27,13 @@ export const pages = () => {
         file => extname(file).toLowerCase() === '.html' && file.toLowerCase() !== 'index.html'
     )
 
-    const indexTemplate = graveyardTemplate(additionalPages)
+    const indexTemplate = listTemplate(additionalPages)
 
     const index = new HTMLWebpackPlugin({
         inject: false,
         hash: false,
         filename: 'index.html',
         templateContent: indexTemplate,
-        favicon: resolve(environment.paths.source, 'assets/img', 'favicon.ico'),
         minify: {
             collapseWhitespace: false,
             keepClosingSlash: true,
@@ -48,6 +47,17 @@ export const pages = () => {
 
     allPages.push(index)
 
+    allPages.push(
+        new HtmlWebpackInjectPreload({
+            files: [
+                {
+                    match: /.*\.woff2$/,
+                    attributes: { as: 'font', type: 'font/woff2', crossorigin: true }
+                }
+            ]
+        })
+    )
+
     additionalPages.forEach((template) => {
         allPages.push(
             new HTMLWebpackPlugin({
@@ -55,7 +65,6 @@ export const pages = () => {
                 hash: false,
                 filename: template,
                 template: resolve(environment.paths.source, 'pages', template),
-                favicon: resolve(environment.paths.source, 'assets/img', 'favicon.ico'),
                 templateParameters: {
                     data: data as object
                 },
@@ -68,16 +77,6 @@ export const pages = () => {
                     removeStyleLinkTypeAttributes: true,
                     useShortDoctype: true
                 }
-            })
-        )
-        allPages.push(
-            new HtmlWebpackInjectPreload({
-                files: [
-                    {
-                        match: /.*\.woff2$/,
-                        attributes: { as: 'font', type: 'font/woff2', crossorigin: true }
-                    }
-                ]
             })
         )
     })
