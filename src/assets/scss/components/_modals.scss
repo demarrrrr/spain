@@ -124,14 +124,15 @@
         height: rem(500px);
         overflow-y: auto;
         scrollbar-width: thin;
-        scrollbar-color: var(--accent-orange) #d9d9d9;
+        scrollbar-color: var(--accent-orange) var(--white);
+        padding-right: rem(16px);
 
         &::-webkit-scrollbar {
             width: 6px;
         }
 
         &::-webkit-scrollbar-track {
-            background: #d9d9d9;
+            background: var(--white);
             border-radius: 10px;
         }
 
