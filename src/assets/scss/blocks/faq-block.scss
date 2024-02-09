@@ -12,6 +12,10 @@
         @include media-breakpoint-down(md) {
             padding: rem(40px 0);
         }
+
+        @include media-breakpoint-down(sm) {
+            padding: rem(30px 0);
+        }
     }
 
     &__title {
@@ -31,6 +35,14 @@
         margin-bottom: rem(30px);
         width: 100%;
         max-width: rem(945px);
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(16px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(14px);
+        }
     }
 
     &__dec-icon {
@@ -104,6 +116,11 @@
             font-size: rem(14px);
             padding: rem(20px);
         }
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(13px);
+            padding: rem(16px);
+        }
     }
 
     &__answer-wrap {
@@ -115,5 +132,13 @@
 
     &__answer {
         padding: rem(26px 30px);
+
+        @include media-breakpoint-down(md) {
+            padding: rem(20px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: rem(16px);
+        }
     }
 }

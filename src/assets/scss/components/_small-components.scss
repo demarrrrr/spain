@@ -21,6 +21,10 @@
         @include media-breakpoint-down(xxl) {
             font-size: rem(20px);
         }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(20px);
+        }
     }
 
     &__work-time {
@@ -114,6 +118,7 @@
         gap: rem(10px);
         width: 100%;
         justify-content: space-between;
+        margin-top: rem(20px);
 
         @include media-breakpoint-down(lg) {
             flex-wrap: wrap;
@@ -153,6 +158,8 @@
 
 .socials-widget {
     display: none;
+    position: relative;
+    z-index: 1000;
 
     @include media-breakpoint-down(md) {
         display: flex;
@@ -194,6 +201,7 @@
         transition: 250ms;
         width: 0;
         max-width: 0;
+        top: 0;
     }
 
     &__toggle {

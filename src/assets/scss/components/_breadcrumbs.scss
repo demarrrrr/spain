@@ -16,6 +16,16 @@
             flex-wrap: wrap;
             gap: rem(20px);
         }
+
+        @include media-breakpoint-down(md) {
+            padding: rem(20px 0);
+            gap: rem(20px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: rem(16px 0);
+            gap: rem(10px);
+        }
     }
 
     &__item {
@@ -23,6 +33,16 @@
         align-items: center;
         gap: rem(40px);
         font-weight: 500;
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(16px);
+            gap: rem(30px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(13px);
+            gap: rem(30px);
+        }
 
         &--active {
             opacity: 0.3;
@@ -48,6 +68,14 @@
             transition: 250ms;
             text-decoration: none;
             color: var(--main);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(16px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(13px);
         }
     }
 }

@@ -50,7 +50,7 @@
             gap: rem(20px);
         }
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
             grid-template-columns: 1fr;
         }
     }
@@ -101,6 +101,14 @@
         align-items: center;
         text-decoration: none;
         font-size: rem(18px);
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(16px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(13px);
+        }
     }
 
     &__info-wrap {
@@ -130,22 +138,66 @@
 
         @include media-breakpoint-down(lg) {
             padding-left: rem(40px);
+            margin-bottom: rem(30px);
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(20px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: rem(16px);
         }
     }
 
     li {
         font-size: rem(18px);
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(14px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(13px);
+        }
     }
 
     p {
         font-size: rem(18px);
         margin-bottom: rem(40px);
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: rem(30px);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(14px);
+            margin-bottom: rem(20px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(13px);
+            margin-bottom: rem(16px);
+        }
     }
 
     h2 {
-        font-size: rem(28px);
+        @extend h2;
+
         line-height: 140%;
         margin-bottom: rem(40px);
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: rem(30px);
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(20px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: rem(16px);
+        }
     }
 
     blockquote {

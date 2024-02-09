@@ -9,14 +9,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        gap: rem(10px);
-        margin-bottom: rem(20px);
-
-        @include media-breakpoint-down(sm) {
-            flex-wrap: wrap;
-            width: 100%;
-            max-width: 100%;
-        }
+        gap: rem(20px);
 
         &--checkbox {
             width: fit-content;
@@ -27,6 +20,7 @@
             margin-bottom: 0;
             margin-bottom: rem(14px);
             padding: 0;
+            gap: 0;
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -59,6 +53,8 @@
                 padding-left: rem(34px);
                 position: relative;
                 margin-bottom: 0;
+                margin-top: rem(20px);
+                margin-right: auto;
                 cursor: pointer;
                 line-height: 155%;
                 color: rgba(46 46 46 / 50%);
@@ -96,7 +92,27 @@
                     opacity: 0;
                     transition: 250ms;
                 }
+
+                @include media-breakpoint-down(md) {
+                    font-size: rem(12px);
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: rem(10px);
+                    margin-top: rem(16px);
+                }
             }
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 100%;
+            gap: rem(16px);
         }
     }
 
@@ -324,7 +340,7 @@
     &__group {
         display: flex;
         align-items: center;
-        gap: rem(10px);
+        gap: rem(20px);
         margin-bottom: rem(20px);
     }
 

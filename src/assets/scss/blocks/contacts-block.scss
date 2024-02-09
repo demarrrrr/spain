@@ -7,6 +7,14 @@
         @include media-breakpoint-down(lg) {
             padding-bottom: $pb-mobile;
         }
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: $pb-mobile;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: $pb-sm;
+        }
     }
 
     &__title {

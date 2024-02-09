@@ -1,2 +1,79 @@
 [
+    {
+        "id": 1,
+        "phone_code": "+7",
+        "country_name": "Russia (Россия)",
+        "country_icon": "flags/ru.svg",
+        "mask": "(000)000-00-00"
+    },
+    {
+        "id": 2,
+        "phone_code": "+374",
+        "country_name": "Armenia (Հայաստան)",
+        "country_icon": "flags/am.svg",
+        "mask": "00-000-00-00"
+    },
+    {
+        "id": 3,
+        "phone_code": "+994",
+        "country_name": "Azerbaijan (Azərbaycan)",
+        "country_icon": "flags/az.svg",
+        "mask": "00-000-00-00"
+    },
+    {
+        "id": 4,
+        "phone_code": "+375",
+        "country_name": "Belarus (Беларусь)",
+        "country_icon": "flags/by.svg",
+        "mask": "(00)000-00-00"
+    },
+    {
+        "id": 5,
+        "phone_code": "+7",
+        "country_name": "Kazakhstan (Казахстан)",
+        "country_icon": "flags/kz.svg",
+        "mask": "0000-00-00-00"
+    },
+    {
+        "id": 6,
+        "phone_code": "+996",
+        "country_name": "Kyrgyzstan (Кыргызстан)",
+        "country_icon": "flags/kg.svg",
+        "mask": "(000)000-000"
+    },
+    {
+        "id": 7,
+        "phone_code": "+373",
+        "country_name": "Moldova (Republica Moldova)",
+        "country_icon": "flags/md.svg",
+        "mask": "0000-0000"
+    },
+    {
+        "id": 8,
+        "phone_code": "+992",
+        "country_name": "Tajikistan",
+        "country_icon": "flags/tj.svg",
+        "mask": "00-000-0000"
+    },
+    {
+        "id": 9,
+        "phone_code": "+998",
+        "country_name": "Uzbekistan (Oʻzbekiston)",
+        "country_icon": "flags/uz.svg",
+        "mask": "00-000-0000"
+    },
+    {
+        "id": 10,
+        "phone_code": "+380",
+        "country_name": "Ukraine",
+        "country_icon": "flags/ua.svg",
+        "mask": "(00)000-00-00"
+    },
+    {
+        "id": 11,
+        "phone_code": "+34",
+        "country_name": "Spain",
+        "country_icon": "flags/sp.svg",
+        "mask": "000-000-0000"
+    }
 ]

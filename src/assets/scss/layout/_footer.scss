@@ -6,6 +6,11 @@
     &__btn {
         @extend %btn-main;
 
+        @include media-breakpoint-down(md) {
+            font-size: rem(12px);
+            padding: rem(20px 15px);
+        }
+
         @include media-breakpoint-down(sm) {
             order: 4;
         }
@@ -28,14 +33,18 @@
         @include media-breakpoint-down(lg) {
             padding-top: rem(36px);
             padding-bottom: rem(36px);
+            gap: rem(30px);
         }
 
         @include media-breakpoint-down(md) {
             padding-top: rem(30px);
             padding-bottom: rem(30px);
+            gap: rem(30px 10px);
         }
 
         @include media-breakpoint-down(sm) {
+            padding-top: rem(16px);
+            padding-bottom: rem(16px);
             gap: rem(16px);
             display: flex;
             flex-direction: column;
@@ -55,6 +64,15 @@
     &__articles-name {
         font-weight: 500;
         margin-bottom: rem(20px);
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(18px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+            font-size: rem(13px);
+        }
     }
 
     &__logo-info {
@@ -63,6 +81,14 @@
 
         @include media-breakpoint-down(xxl) {
             font-size: rem(20px);
+        }
+
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(20px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(18px);
         }
     }
 
@@ -88,6 +114,10 @@
 
         @include media-breakpoint-down(lg) {
             border-radius: rem(10px);
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-right: rem(10px);
         }
 
         @include media-breakpoint-down(sm) {
@@ -188,6 +218,7 @@
         }
 
         @include media-breakpoint-down(sm) {
+            padding: rem(16px 0);
             flex-direction: column-reverse;
             justify-content: center;
             text-align: center;
