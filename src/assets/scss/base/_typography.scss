@@ -17,7 +17,15 @@ h2 {
     line-height: 145%;
 
     @include media-breakpoint-down(xxl) {
-        font-size: rem(20px);
+        font-size: rem(32px);
+    }
+
+    @include media-breakpoint-down(lg) {
+        font-size: rem(28px);
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: rem(24px);
     }
 
     span {

@@ -8,6 +8,8 @@
     }
 
     &__title {
+        @extend h2;
+
         width: fit-content;
         max-width: rem(752px);
         margin: 0 auto;

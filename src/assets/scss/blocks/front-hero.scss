@@ -31,6 +31,19 @@
 
     &__heading {
         margin-bottom: rem(20px);
+        font-size: rem(42px);
+
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(36px);
+        }
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(36px);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(28px);
+        }
     }
 
     &__subheading {
@@ -41,6 +54,18 @@
         margin-bottom: rem(30px);
         text-shadow: 0 4px 4px #bfbfbf;
         line-height: 140%;
+
+        @include media-breakpoint-down(xxl) {
+            font-size: rem(28px);
+        }
+
+        @include media-breakpoint-down(lg) {
+            font-size: rem(20px);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(16px);
+        }
     }
 
     &__info {

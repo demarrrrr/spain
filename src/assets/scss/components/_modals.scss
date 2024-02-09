@@ -39,6 +39,7 @@
         font-weight: 700;
         line-height: 145%;
         margin-bottom: rem(30px);
+        padding-right: rem(40px);
 
         @include media-breakpoint-down(xxl) {
             font-size: rem(18px);
