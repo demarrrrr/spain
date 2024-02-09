@@ -4,7 +4,7 @@
         "phone_code": "+7",
         "country_name": "Russia (Россия)",
         "country_icon": "flags/ru.svg",
-        "mask": "(000)000-00-00"
+        "mask": "(000) 000-00-00"
     },
     {
         "id": 2,
@@ -25,7 +25,7 @@
         "phone_code": "+375",
         "country_name": "Belarus (Беларусь)",
         "country_icon": "flags/by.svg",
-        "mask": "(00)000-00-00"
+        "mask": "(00) 000-00-00"
     },
     {
         "id": 5,
@@ -39,7 +39,7 @@
         "phone_code": "+996",
         "country_name": "Kyrgyzstan (Кыргызстан)",
         "country_icon": "flags/kg.svg",
-        "mask": "(000)000-000"
+        "mask": "(000) 000-000"
     },
     {
         "id": 7,
@@ -67,7 +67,7 @@
         "phone_code": "+380",
         "country_name": "Ukraine",
         "country_icon": "flags/ua.svg",
-        "mask": "(00)000-00-00"
+        "mask": "(00) 000-00-00"
     },
     {
         "id": 11,

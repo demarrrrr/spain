@@ -105,6 +105,25 @@ const initWidget = () => {
     })
 }
 
+const initNextBlockBtns = () => {
+    const header = document.querySelector('.header') as HTMLElement | undefined
+    const nextBlockBtns = document.querySelectorAll('[data-next-block-btn]')
+
+    nextBlockBtns.forEach((el) => {
+        el.addEventListener('click', () => {
+            const closestParentSection = el.closest('article')
+            const nextSection = closestParentSection?.nextSibling?.nextSibling
+
+            if (!nextSection) return
+
+            const offset = header?.offsetHeight || 0
+            window.scrollTo({
+                top: (nextSection as HTMLElement).offsetTop - offset
+            })
+        })
+    })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init()
 
@@ -113,4 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initUrlAnchor()
     initBodyPadding()
     initWidget()
+    initNextBlockBtns()
+
 })

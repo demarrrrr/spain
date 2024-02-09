@@ -55,7 +55,7 @@ module.exports = {
                         'newlines-between': 'always'
                     }
                 ],
-                "import/no-extraneous-dependencies": ['error', {"devDependencies": ["./configuration/*.ts", './utils/*.ts', 'webpack.config.ts']}],
+                "import/no-extraneous-dependencies": ['error', {"devDependencies": ["./configuration/*.ts", './utils/*.ts', 'webpack.config.ts', './src/pages/helpers/*.ts']}],
                 'import/prefer-default-export': 'off',
                 'import/no-dynamic-require': 'warn',
                 'object-curly-spacing': ['error', 'always'],
@@ -128,7 +128,7 @@ module.exports = {
                         'newlines-between': 'always'
                     }
                 ],
-                "import/no-extraneous-dependencies": ['error', {"devDependencies": ["./configuration/*.ts", './utils/*.ts', 'webpack.config.ts']}],
+                "import/no-extraneous-dependencies": ['error', {"devDependencies": ["./configuration/*.ts", './utils/*.ts', 'webpack.config.ts', './src/pages/helpers/*.ts']}],
                 'import/prefer-default-export': 'off',
                 '@typescript-eslint/no-unused-expressions': ["error", { "allowShortCircuit": true, "allowTernary": false }],
                 'object-curly-spacing': ['error', 'always'],

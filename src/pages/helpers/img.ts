@@ -44,6 +44,8 @@ const img = (
             break
     }
 
+    console.log(block)
+
     const { base, webp, avif } = file
 
     return block.fn({ base, webp, avif, unlazy })

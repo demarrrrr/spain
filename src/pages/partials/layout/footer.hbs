@@ -461,155 +461,7 @@
 
                     <div class="form-main__group">
 
-                        <div class="form-main__list-wrap" data-tel-wrap>
-                            <label for="tel1" class="sr-only">Телефон</label>
-
-                            <input type="tel" data-tel-input id="tel1" placeholder="(___)___-__-__"
-                                class="form-main__input form-main__input--full">
-
-                            <button type="button" data-tel-toggle class="form-main__tel-info-box">
-
-                                <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon"
-                                    data-icon-target>
-                                <span class="form-main__tel-code" data-code-target>+7</span>
-                            </button>
-
-                            <ul class="form-main__country-list">
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code="(000)000-00-00">+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/am.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Armenia (Հայաստան)</div>
-
-                                    <div class="form-main__code" data-tel-code="00-000-000">+374</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/az.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Azerbaijan (Azərbaycan)</div>
-
-                                    <div class="form-main__code" data-tel-code="00-000-00-00">+994</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/by.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/kg.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/kz.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/md.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/sp.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/tj.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/ua.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                                <li class="form-main__country-item" data-tel-item>
-
-                                    <img src="@/assets/img/flags/ua.svg" alt="" class="form-main__country-icon"
-                                        data-tel-icon>
-
-                                    <div class="form-main__name">Russia (Россия)</div>
-
-                                    <div class="form-main__code" data-tel-code>+7</div>
-
-                                </li>
-
-                            </ul>
-                        </div>
+                        {{> ./form/telInput countries=data }}
 
                         <button class="form-main__submit">
                             Оставить заявку
@@ -674,10 +526,10 @@
                         <input class="form-main__input" type="checkbox" name="cat1" id="cat1">
                         <label for="cat1" class="form-main__label">
                             Нажимая “Оставить заявку”, вы даете согласие на обработку
-                            <button data-modal="policy" class="form-main__btn-link">персональных данных</button> и
+                            <a href="#" data-modal="policy" class="form-main__btn-link">персональных данных</a> и
                             ознакомлен с
-                            <button data-modal="policy" class="form-main__btn-link">политикой
-                                конфеденциальности.</button>
+                            <a href="#" data-modal="policy" class="form-main__btn-link">политикой
+                                конфеденциальности.</a>
                         </label>
                     </div>
 
