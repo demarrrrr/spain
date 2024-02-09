@@ -255,8 +255,27 @@
 
             .form-main__country-list {
                 height: fit-content;
-                max-height: rem(5000px);
+                max-height: rem(300px);
                 transition: 250ms;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 10px 10px 0 rgba(0 0 0 / 25%);
+                overflow-y: auto;
+                scrollbar-width: thin;
+                scrollbar-color: var(--accent-orange) #d9d9d9;
+
+                &::-webkit-scrollbar {
+                    width: 6px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: var(--white);
+                    border-radius: 10px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: var(--accent-orange);
+                    border-radius: 10px;
+                }
             }
 
             .form-main__tel-info-box {

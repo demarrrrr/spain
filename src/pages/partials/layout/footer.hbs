@@ -5,14 +5,14 @@
 
             <div class="footer__top-bar">
 
-                <div class="footer__logo-wrap">
-                    <a class="footer__logo" href="#">
+                <a href="" class="footer__logo-wrap">
+                    <div class="footer__logo">
                         <img src="@/assets/img/icons/logo-main.svg" alt="Логотип">
-                    </a>
+                    </div>
                     <div class="footer__logo-info">
                         ВНЖ Испании
                     </div>
-                </div>
+                </a>
 
                 <div class="footer__small-contacts small-contacts">
 
@@ -63,7 +63,7 @@
 
                 </div>
 
-                <button class="footer__btn">
+                <button class="footer__btn" data-modal="form">
                     Бесплатная консультация
                 </button>
 
@@ -418,13 +418,13 @@
                         <div class="form-main__list-wrap" data-tel-wrap>
                             <label for="tel1" class="sr-only">Телефон</label>
 
-                            <input type="tel" data-tel-input id="tel1" placeholder="(000)000-00-00"
+                            <input type="tel" data-tel-input id="tel1" placeholder="(___)___-__-__"
                                 class="form-main__input form-main__input--full">
 
                             <button type="button" data-tel-toggle class="form-main__tel-info-box">
                                 <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon"
                                     data-icon-target>
-                                <div class="form-main__tel-code" data-code-target>+7</div>
+                                <span class="form-main__tel-code" data-code-target>+7</span>
                                 <svg width="12" height="5" viewBox="0 0 12 5" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6 5L12 0H0L6 5Z" fill="#2E2E2E" />

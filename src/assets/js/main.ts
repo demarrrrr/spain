@@ -23,9 +23,11 @@ items.forEach((item) => {
 const mobileToggle = document.querySelector('.header__mobile-toggle') as HTMLElement
 const mobileMenu = document.querySelector('.mobile-menu-wrap')
 const mobileMenuWrap = document.querySelector('.mobile-menu-wrap__wrap') as HTMLElement
-const header = document.querySelector('.header') 
+const header = document.querySelector('.header')
+let isMenuOpened = false
 
 mobileToggle.addEventListener('click', () => {
+    isMenuOpened = !isMenuOpened
     header?.classList.toggle('header--active')
     html.classList.toggle('locked')
     mobileToggle.classList.toggle('header__mobile-toggle--active')
@@ -34,7 +36,8 @@ mobileToggle.addEventListener('click', () => {
 
 /* close menu */
 
-document.addEventListener('click', (e) =>{   
+document.addEventListener('click', (e) =>{
+    if (!isMenuOpened) return
     if (!mobileMenuWrap.contains(e.target as Node) && !mobileToggle.contains(e.target as Node)){
         header?.classList.remove('header--active')
         html.classList.remove('locked')
@@ -42,4 +45,3 @@ document.addEventListener('click', (e) =>{
         mobileMenu?.classList.remove('mobile-menu-wrap--active')
     }
 })
-
