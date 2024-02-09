@@ -17,7 +17,7 @@ const initUrlAnchor = () => {
     const { hash } = window.location
 
     if (!hash) return
-    
+
     scrollToAnchor(hash)
 }
 
@@ -46,17 +46,21 @@ const initMobileMenuInteractions = () => {
     ) as HTMLElement
 
     const header = document.querySelector('.header')
-    const headerLinks = document.querySelectorAll('.header-menu__link')
+    const headerLinks = document.querySelectorAll('.header-menu__link, .mobile-menu__link')
 
     let isMenuOpened = false
 
-    mobileToggle.addEventListener('click', (e) => {
-        e.stopPropagation()
+    const toggleMenu = () => {
         isMenuOpened = !isMenuOpened
         header?.classList.toggle('header--active')
         document.documentElement.classList.toggle('locked')
         mobileToggle.classList.toggle('header__mobile-toggle--active')
         mobileMenu?.classList.toggle('mobile-menu-wrap--active')
+    }
+
+    mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation()
+        toggleMenu()
     })
 
     /* close menu on document click */
@@ -81,6 +85,10 @@ const initMobileMenuInteractions = () => {
                 e.preventDefault()
 
                 scrollToAnchor(linkEl.hash)
+
+                if (window.matchMedia('(max-width: 940px)').matches) {
+                    toggleMenu()
+                }
             }
         })
     })
@@ -92,7 +100,10 @@ const initBodyPadding = () => {
 
     if (!header) return
 
-    document.body.style.paddingTop = `${header.offsetHeight}px`
+    setTimeout(() => {
+        document.body.style.paddingTop = `${header.offsetHeight}px`
+    }, 10)
+
 }
 
 const initWidget = () => {
@@ -124,14 +135,22 @@ const initNextBlockBtns = () => {
     })
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    AOS.init()
+const initAOS = () => {
+    AOS.init({
+        startEvent: 'load',
+    })
 
+    window.scrollBy({
+        top: 1,
+    })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     initFaqToggles()
     initMobileMenuInteractions()
     initUrlAnchor()
     initBodyPadding()
     initWidget()
     initNextBlockBtns()
-
+    initAOS()
 })

@@ -1,0 +1,50 @@
+<div class="form-main__list-wrap" data-tel-wrap>
+
+    {{#uid label placeholder name text type }}
+    <label for="{{id}}" class="sr-only">Телефон</label>
+
+    <input
+        type="tel"
+        data-tel-input
+        id="{{id}}"
+        placeholder="(___)___-__-__"
+        class="form-main__input"
+        required
+    />
+    {{/uid}}
+
+    <button type="button" data-tel-toggle class="form-main__tel-info-box">
+        <img
+            src="@/assets/img/flags/ru.svg"
+            alt=""
+            class="form-main__country-icon"
+            data-icon-target
+        />
+        <span class="form-main__tel-code" data-code-target>+7</span>
+    </button>
+
+    <ul class="form-main__country-list">
+        {{#each data}}
+
+            <li class="form-main__country-item" data-tel-item>
+                {{#img this.country_icon false}}
+                    <img
+                        class="form-main__country-icon"
+                        data-tel-icon
+                        alt=""
+                        src="{{base}}"
+                    />
+                {{/img}}
+
+                <div class="form-main__name">
+                    {{this.country_name}}
+                </div>
+
+                <div class="form-main__code" data-tel-code="{{this.mask}}">
+                    {{this.phone_code}}
+                </div>
+            </li>
+
+        {{/each}}
+    </ul>
+</div>

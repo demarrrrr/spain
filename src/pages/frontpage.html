@@ -6,7 +6,7 @@
     <article class="frontpage__front-hero front-hero">
         <div class="front-hero__wrap">
             <div class="container">
-                <div class="front-hero__content" data-aos="fade-right">
+                <div class="front-hero__content" data-aos="fade-right"  data-aos-once="true">
                     <div class="front-hero__text-content">
                         <h2 class="front-hero__heading">
                             ВНЖ Испании за месяц
@@ -77,8 +77,8 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-left">
-                    {{> picture class="front-hero__img-wrap" src="person.png" }}
+                <div data-aos="fade-left" data-aos-once="true">
+                    {{> picture unlazy=true class="front-hero__img-wrap" src="person.png" }}
                 </div>
 
                 <button class="front-hero__next-block-btn" data-next-block-btn>
@@ -102,7 +102,7 @@
                     </h2>
 
                     <div class="front-hero__info front-hero__info--mobile">
-                        <b>Аскар Аскаров</b> оказываю юридическую помощью в
+                        оказываю юридическую помощью в
                         Испании
                     </div>
 

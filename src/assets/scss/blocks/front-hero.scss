@@ -150,6 +150,15 @@
         background-color: var(--white);
         border-radius: 50%;
         box-shadow: 0 0 10px 0 rgba(0 0 0 / 30%);
+        z-index: 100;
+
+        @media (width <= 1450px) {
+            right: rem(16px);
+        }
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
     }
 
     &__list {
