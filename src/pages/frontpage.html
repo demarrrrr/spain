@@ -75,9 +75,6 @@
                                     <button type="button" data-tel-toggle class="form-main__tel-info-box">
                                         <img src="@/assets/img/flags/ru.svg" alt="" class="form-main__country-icon" data-icon-target>
                                         <div class="form-main__tel-code" data-code-target>+7</div>
-                                        <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 5L12 0H0L6 5Z" fill="#2E2E2E"/>
-                                        </svg>                                        
                                     </button>
 
                                     <ul class="form-main__country-list">
@@ -281,7 +278,7 @@
 
     </article>
 
-    <article class="frontpage__types-block types-block">
+    <article class="frontpage__types-block types-block" id="types">
 
         <div class="types-block__wrap">
 
@@ -565,7 +562,7 @@
 
     </article>
 
-    <article class="frontpage__documents-block documents-block">
+    <article class="frontpage__documents-block documents-block" id="documents">
 
         <div class="documents-block__wrap">
 
@@ -621,7 +618,7 @@
 
     </article>
 
-    <article class="frontpage__price-list-block price-list-block">
+    <article class="frontpage__price-list-block price-list-block" id="price">
 
         <div class="price-list-block__wrap">
 
@@ -753,7 +750,7 @@
 
     </article>
 
-    <article class="frontpage__faq-block faq-block">
+    <article class="frontpage__faq-block faq-block" id="faq">
 
         <div class="faq-block__wrap">
 
@@ -815,7 +812,7 @@
 
     </article>
 
-    <article class="frontpage__reviews-block reviews-block">
+    <article class="frontpage__reviews-block reviews-block" id="reviews">
 
         <div class="reviews-block__wrap">
 
@@ -845,8 +842,8 @@
 
                         <div class="swiper-slide">
 
-                            <div data-fancybox class="reviews-slider__item">
-                                <img src="@/assets/img/placeholders/review1.jpg" alt="Отзыв1" class="reviews-slider__img">
+                            <div class="reviews-slider__item">
+                                {{> picture src="placeholders/review1.jpg"  class="reviews-slider__img" }}
                             </div>
 
                         </div>
@@ -855,9 +852,7 @@
 
                     </div>
 
-                    <div class="reviews-slider__pagination">
-
-                    </div>
+                    <div class="reviews-slider__pagination"></div>
 
                 </div>
 
@@ -1049,7 +1044,7 @@
 
     </article>
 
-    <article class="frontpage__contacts-block contacts-block">
+    <article class="frontpage__contacts-block contacts-block" id="contacts">
 
         <div class="contacts-block__wrap">
 
