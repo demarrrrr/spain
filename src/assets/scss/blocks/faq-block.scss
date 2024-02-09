@@ -6,11 +6,11 @@
         background-repeat: no-repeat;
 
         @include media-breakpoint-down(lg) {
-            padding: rem(50px);
+            padding: rem(50px 0);
         }
 
         @include media-breakpoint-down(md) {
-            padding: rem(40px);
+            padding: rem(40px 0);
         }
     }
 

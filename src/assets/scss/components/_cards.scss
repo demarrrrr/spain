@@ -51,11 +51,13 @@
     &__name {
         font-size: rem(24px);
         line-height: 145%;
+        text-decoration: none;
     }
 
     &__category {
         color: var(--accent-orange);
         font-size: rem(18px);
+        margin-top: rem(-16px);
 
         @include media-breakpoint-down(lg) {
             font-size: rem(16px);

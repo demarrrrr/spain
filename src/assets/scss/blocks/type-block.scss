@@ -40,12 +40,11 @@
         gap: rem(40px);
 
         @include media-breakpoint-down(lg) {
-            grid-template-columns: repeat(2, 1fr);
             gap: rem(30px);
         }
 
         @include media-breakpoint-down(md) {
-            grid-template-columns: repeat(1, 1fr);
+            flex-direction: column;
         }
     }
 
@@ -56,7 +55,7 @@
             width: calc(50% - 20px);
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             width: calc(100%);
         }
     }

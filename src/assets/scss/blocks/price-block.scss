@@ -95,6 +95,10 @@
 
         margin: 0 auto;
 
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+
         svg {
             display: block;
             width: rem(20px);

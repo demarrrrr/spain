@@ -9,6 +9,7 @@
         display: block;
 
         @include media-breakpoint-down(xxl) {
+            max-width: 100%;
             text-align: center;
             margin: 0 auto;
             margin-bottom: rem(30px);
@@ -45,6 +46,14 @@
             width: 100%;
             max-width: rem(680px);
             margin: 0 auto;
+        }
+    }
+
+    .form-main__group {
+        @include media-breakpoint-down(md) {
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 100%;
         }
     }
 

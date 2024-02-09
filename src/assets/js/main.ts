@@ -62,7 +62,7 @@ const initMobileMenuInteractions = () => {
     /* close menu on document click */
     document.addEventListener('click', (e) => {
         if (!isMenuOpened) return
-        
+
         if (!mobileMenuWrap.contains(e.target as HTMLElement)) {
             header?.classList.remove('header--active')
             document.documentElement.classList.remove('locked')
@@ -86,13 +86,24 @@ const initMobileMenuInteractions = () => {
     })
 }
 
-const widgetToggle = document.querySelector('.socials-widget__toggle') as HTMLElement
 
-widgetToggle.addEventListener('click', () => {
-    const parent = widgetToggle.parentNode as HTMLElement
+const initBodyPadding = () => {
+    const header = document.querySelector('.header') as HTMLElement | undefined
 
-    parent.classList.toggle('socials-widget__wrap--active')
-})
+    if (!header) return
+
+    document.body.style.paddingTop = `${header.offsetHeight}px`
+}
+
+const initWidget = () => {
+    const widgetToggle = document.querySelector('.socials-widget__toggle') as HTMLElement
+
+    widgetToggle.addEventListener('click', () => {
+        const parent = widgetToggle.parentNode as HTMLElement
+
+        parent.classList.toggle('socials-widget__wrap--active')
+    })
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init()
@@ -100,4 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initFaqToggles()
     initMobileMenuInteractions()
     initUrlAnchor()
+    initBodyPadding()
+    initWidget()
 })
