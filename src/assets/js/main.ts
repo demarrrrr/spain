@@ -86,12 +86,23 @@ const initMobileMenuInteractions = () => {
     })
 }
 
+
 const initBodyPadding = () => {
     const header = document.querySelector('.header') as HTMLElement | undefined
 
     if (!header) return
 
     document.body.style.paddingTop = `${header.offsetHeight}px`
+}
+
+const initWidget = () => {
+    const widgetToggle = document.querySelector('.socials-widget__toggle') as HTMLElement
+
+    widgetToggle.addEventListener('click', () => {
+        const parent = widgetToggle.parentNode as HTMLElement
+
+        parent.classList.toggle('socials-widget__wrap--active')
+    })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -101,4 +112,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenuInteractions()
     initUrlAnchor()
     initBodyPadding()
+    initWidget()
 })
