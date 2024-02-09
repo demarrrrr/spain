@@ -12,6 +12,8 @@
     }
 
     &__heading {
+        @extend h2;
+
         font-size: rem(38px);
         font-weight: 700;
         margin-bottom: rem(30px);
