@@ -1,47 +1,95 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import AOS from 'aos'
 
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-const html = document.documentElement
+const scrollToAnchor = (id: string) => {
+    const target = document.querySelector(id) as HTMLElement | undefined
+    const header = document.querySelector('.header') as HTMLElement | undefined
 
-AOS.init()
+    if (!target) return
 
-/* FAQ toggles */
+    const offset = header?.offsetHeight || 0
 
-const items = document.querySelectorAll('.faq-block__item')
+    window.scrollTo({
+        top: target.offsetTop - offset,
+    })
+}
 
-items.forEach((item) => {
-    const question = item.querySelector('.faq-block__question') as HTMLElement
-    question.addEventListener('click', () => {
-        item.classList.toggle('faq-block__item--active')
-    })  
-})
+const initUrlAnchor = () => {
+    const { hash } = window.location
 
-/* mobileMenuToggle */
+    if (!hash) return
+    
+    scrollToAnchor(hash)
+}
 
-const mobileToggle = document.querySelector('.header__mobile-toggle') as HTMLElement
-const mobileMenu = document.querySelector('.mobile-menu-wrap')
-const mobileMenuWrap = document.querySelector('.mobile-menu-wrap__wrap') as HTMLElement
-const header = document.querySelector('.header')
-let isMenuOpened = false
+const initFaqToggles = () => {
+    const items = document.querySelectorAll('.faq-block__item')
 
-mobileToggle.addEventListener('click', () => {
-    isMenuOpened = !isMenuOpened
-    header?.classList.toggle('header--active')
-    html.classList.toggle('locked')
-    mobileToggle.classList.toggle('header__mobile-toggle--active')
-    mobileMenu?.classList.toggle('mobile-menu-wrap--active')
-})
+    items.forEach((item) => {
+        const question = item.querySelector(
+            '.faq-block__question',
+        ) as HTMLElement
+        question.addEventListener('click', () => {
+            item.classList.toggle('faq-block__item--active')
+        })
+    })
+}
 
-/* close menu */
+const initMobileMenuInteractions = () => {
+    const mobileToggle = document.querySelector(
+        '.header__mobile-toggle',
+    ) as HTMLElement
 
-document.addEventListener('click', (e) =>{
-    if (!isMenuOpened) return
-    if (!mobileMenuWrap.contains(e.target as Node) && !mobileToggle.contains(e.target as Node)){
-        header?.classList.remove('header--active')
-        html.classList.remove('locked')
-        mobileToggle.classList.remove('header__mobile-toggle--active')
-        mobileMenu?.classList.remove('mobile-menu-wrap--active')
-    }
+    const mobileMenu = document.querySelector('.mobile-menu-wrap')
+
+    const mobileMenuWrap = document.querySelector(
+        '.mobile-menu-wrap__wrap',
+    ) as HTMLElement
+
+    const header = document.querySelector('.header')
+    const headerLinks = document.querySelectorAll('.header-menu__link')
+
+    let isMenuOpened = false
+
+    mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation()
+        isMenuOpened = !isMenuOpened
+        header?.classList.toggle('header--active')
+        document.documentElement.classList.toggle('locked')
+        mobileToggle.classList.toggle('header__mobile-toggle--active')
+        mobileMenu?.classList.toggle('mobile-menu-wrap--active')
+    })
+
+    /* close menu on document click */
+    document.addEventListener('click', (e) => {
+        if (!isMenuOpened) return
+        
+        if (!mobileMenuWrap.contains(e.target as HTMLElement)) {
+            header?.classList.remove('header--active')
+            document.documentElement.classList.remove('locked')
+            mobileToggle.classList.remove('header__mobile-toggle--active')
+            mobileMenu?.classList.remove('mobile-menu-wrap--active')
+        }
+    })
+
+    /* Header links */
+
+    headerLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const linkEl = link as HTMLAnchorElement
+
+            if (linkEl.hash) {
+                e.preventDefault()
+
+                scrollToAnchor(linkEl.hash)
+            }
+        })
+    })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init()
+
+    initFaqToggles()
+    initMobileMenuInteractions()
+    initUrlAnchor()
 })
