@@ -45,6 +45,8 @@
     max-width: rem(270px);
     text-align: center;
     color: var(--main);
+    background: none;
+    text-transform: capitalize;
 
     @include media-breakpoint-down(xxl) {
         padding: rem(20px);

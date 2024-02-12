@@ -61,20 +61,6 @@
         }
     }
 
-    &__articles-name {
-        font-weight: 500;
-        margin-bottom: rem(20px);
-
-        @include media-breakpoint-down(md) {
-            margin-bottom: rem(18px);
-        }
-
-        @include media-breakpoint-down(sm) {
-            text-align: center;
-            font-size: rem(13px);
-        }
-    }
-
     &__logo-info {
         font-size: rem(28px);
         font-weight: 700;
@@ -137,73 +123,15 @@
         @include media-breakpoint-down(md) {
             padding-bottom: rem(30px);
         }
-    }
-
-    &__articles-list {
-        @include unlist();
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: rem(10px);
-
-        @include media-breakpoint-down(lg) {
-            gap: rem(24px);
-        }
-
-        @include media-breakpoint-down(md) {
-            gap: rem(16px);
-        }
-    }
-
-    &__article-item {
-        width: 32%;
-
-        @include media-breakpoint-down(lg) {
-            width: 48%;
-        }
-
-        @include media-breakpoint-down(md) {
-            width: 100%;
-        }
-    }
-
-    &__small-socials {
-        @include media-breakpoint-down(xl) {
-            order: 1;
-            margin-left: auto;
-        }
 
         @include media-breakpoint-down(sm) {
-            margin: 0 auto;
+            padding-bottom: rem(16px);
         }
     }
 
     &__small-contacts {
         @include media-breakpoint-down(xl) {
             order: 1;
-        }
-    }
-
-    &__article-link {
-        padding-left: rem(30px);
-        position: relative;
-        display: block;
-        text-decoration: none;
-        line-height: 150%;
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: rem(20px);
-            height: rem(20px);
-            margin: auto;
-            display: block;
-            background-size: contain;
-            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8334 9.79121C10.675 9.79121 10.5167 9.73288 10.3917 9.60788C10.15 9.36621 10.15 8.96621 10.3917 8.72454L17.225 1.89121C17.4667 1.64954 17.8667 1.64954 18.1084 1.89121C18.35 2.13288 18.35 2.53288 18.1084 2.77454L11.275 9.60788C11.15 9.73288 10.9917 9.79121 10.8334 9.79121Z' fill='%23EA860B'/%3E%3Cpath d='M18.3333 6.29199C17.9916 6.29199 17.7083 6.00866 17.7083 5.66699V2.29199H14.3333C13.9916 2.29199 13.7083 2.00866 13.7083 1.66699C13.7083 1.32533 13.9916 1.04199 14.3333 1.04199H18.3333C18.6749 1.04199 18.9583 1.32533 18.9583 1.66699V5.66699C18.9583 6.00866 18.6749 6.29199 18.3333 6.29199Z' fill='%23EA860B'/%3E%3Cpath d='M12.5001 18.9587H7.50008C2.97508 18.9587 1.04175 17.0253 1.04175 12.5003V7.50033C1.04175 2.97533 2.97508 1.04199 7.50008 1.04199H9.16675C9.50842 1.04199 9.79175 1.32533 9.79175 1.66699C9.79175 2.00866 9.50842 2.29199 9.16675 2.29199H7.50008C3.65841 2.29199 2.29175 3.65866 2.29175 7.50033V12.5003C2.29175 16.342 3.65841 17.7087 7.50008 17.7087H12.5001C16.3417 17.7087 17.7084 16.342 17.7084 12.5003V10.8337C17.7084 10.492 17.9917 10.2087 18.3334 10.2087C18.6751 10.2087 18.9584 10.492 18.9584 10.8337V12.5003C18.9584 17.0253 17.0251 18.9587 12.5001 18.9587Z' fill='%23EA860B'/%3E%3C/svg%3E%0A");
         }
     }
 
@@ -227,5 +155,72 @@
 
     &__policy {
         text-decoration: none;
+    }
+}
+
+.footer-menu {
+    &__list {
+        @include unlist();
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: rem(10px);
+
+        @include media-breakpoint-down(lg) {
+            gap: rem(24px);
+        }
+
+        @include media-breakpoint-down(md) {
+            gap: rem(16px);
+        }
+    }
+
+    &__item {
+        width: 32%;
+
+        @include media-breakpoint-down(lg) {
+            width: 48%;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+
+    &__link {
+        padding-left: rem(30px);
+        position: relative;
+        display: block;
+        text-decoration: none;
+        line-height: 150%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: rem(20px);
+            height: rem(20px);
+            margin: auto;
+            display: block;
+            background-size: contain;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8334 9.79121C10.675 9.79121 10.5167 9.73288 10.3917 9.60788C10.15 9.36621 10.15 8.96621 10.3917 8.72454L17.225 1.89121C17.4667 1.64954 17.8667 1.64954 18.1084 1.89121C18.35 2.13288 18.35 2.53288 18.1084 2.77454L11.275 9.60788C11.15 9.73288 10.9917 9.79121 10.8334 9.79121Z' fill='%23EA860B'/%3E%3Cpath d='M18.3333 6.29199C17.9916 6.29199 17.7083 6.00866 17.7083 5.66699V2.29199H14.3333C13.9916 2.29199 13.7083 2.00866 13.7083 1.66699C13.7083 1.32533 13.9916 1.04199 14.3333 1.04199H18.3333C18.6749 1.04199 18.9583 1.32533 18.9583 1.66699V5.66699C18.9583 6.00866 18.6749 6.29199 18.3333 6.29199Z' fill='%23EA860B'/%3E%3Cpath d='M12.5001 18.9587H7.50008C2.97508 18.9587 1.04175 17.0253 1.04175 12.5003V7.50033C1.04175 2.97533 2.97508 1.04199 7.50008 1.04199H9.16675C9.50842 1.04199 9.79175 1.32533 9.79175 1.66699C9.79175 2.00866 9.50842 2.29199 9.16675 2.29199H7.50008C3.65841 2.29199 2.29175 3.65866 2.29175 7.50033V12.5003C2.29175 16.342 3.65841 17.7087 7.50008 17.7087H12.5001C16.3417 17.7087 17.7084 16.342 17.7084 12.5003V10.8337C17.7084 10.492 17.9917 10.2087 18.3334 10.2087C18.6751 10.2087 18.9584 10.492 18.9584 10.8337V12.5003C18.9584 17.0253 17.0251 18.9587 12.5001 18.9587Z' fill='%23EA860B'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        margin-bottom: rem(20px);
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(18px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+            font-size: rem(13px);
+        }
     }
 }

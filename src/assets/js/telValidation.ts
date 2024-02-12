@@ -67,5 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
         })
+
+        /* close menu on document click */
+        document.addEventListener('click', (e) => {
+            if (!parent.contains(e.target as HTMLElement)) {
+                parent?.classList.remove('form-main__list-wrap--show-list')
+            }
+        })
     })
 })

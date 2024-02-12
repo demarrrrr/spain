@@ -12,6 +12,22 @@
     max-height: 100%;
     border: none;
 
+    &--success {
+        .modal__body {
+            padding: rem(200px 0);
+        }
+
+        .modal__title {
+            text-align: center;
+            margin-bottom: 0;
+            font-size: rem(40px);
+
+            @include media-breakpoint-down(md) {
+                font-size: rem(30px);
+            }
+        }
+    }
+
     &[open] {
         transition: opacity 350ms;
     }

@@ -15,6 +15,14 @@
         @include media-breakpoint-down(sm) {
             padding-bottom: $pb-sm;
         }
+
+        .form-main__group:not(.form-main__group--checkbox) {
+            flex-direction: column;
+        }
+
+        .form-main__submit {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -80,6 +88,7 @@
         position: absolute;
         top: rem(32px);
         right: rem(32px);
+        z-index: 1;
     }
 
     &__item-name {

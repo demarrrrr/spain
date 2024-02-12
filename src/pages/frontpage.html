@@ -75,26 +75,28 @@
                             </div>
                         </form>
                     </div>
+
+                    <button class="front-hero__next-block-btn" data-next-block-btn>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.9182 36.2483C19.6999 36.2292 19.4952 36.1342 19.3396 35.9798L13.8123 30.4622C13.4446 30.0958 13.4446 29.5004 13.8123 29.1341C14.1786 28.7664 14.774 28.7664 15.1404 29.1341L19.0637 33.0574V16.2581C18.424 15.9168 17.9822 15.2385 17.9822 14.471C17.9822 13.3685 18.8914 12.4593 19.9939 12.4593C21.0964 12.4593 22.0154 13.3685 22.0154 14.471C22.0154 15.235 21.5739 15.9104 20.9363 16.2532V33.0476L24.8572 29.1341C25.2236 28.7664 25.8189 28.7664 26.1853 29.1341C26.553 29.5004 26.553 30.0958 26.1853 30.4622L20.658 35.9798C20.4627 36.1735 20.1923 36.2716 19.9182 36.2483ZM16.1926 25.1375C11.9724 23.5864 8.96851 19.5319 8.96851 14.7859C8.96851 8.70474 13.9118 3.74832 19.9939 3.74832C26.076 3.74832 31.0315 8.70474 31.0315 14.7859C31.0315 19.5235 28.0329 23.5705 23.8245 25.1277C23.3405 25.3054 22.8039 25.0589 22.6233 24.576C22.4459 24.0913 22.6936 23.5544 23.1775 23.3748C26.6659 22.084 29.1565 18.7339 29.1565 14.7859C29.1565 9.71827 25.0629 5.63065 19.9939 5.63065C14.9249 5.63065 10.8411 9.71827 10.8411 14.7859C10.8411 18.7409 13.3414 22.0988 16.8396 23.3846C17.3212 23.5651 17.5674 24.1 17.3914 24.5833C17.2381 25.0323 16.7378 25.3636 16.1926 25.1375Z"
+                                fill="#EA860B" />
+                        </svg>
+                    </button>
                 </div>
 
-                <div data-aos="fade-left" data-aos-anchor=".front-hero">
-                    {{> picture unlazy=true class="front-hero__img-wrap" src="person.png" }}
+                <div class="front-hero__img-container"> 
+                    <div data-aos="fade-left" data-aos-anchor=".front-hero">
+                        {{> picture unlazy=true class="front-hero__img-wrap" src="person.png" }}
+                    </div>
                 </div>
-
-                <button class="front-hero__next-block-btn" data-next-block-btn>
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M19.9182 36.2483C19.6999 36.2292 19.4952 36.1342 19.3396 35.9798L13.8123 30.4622C13.4446 30.0958 13.4446 29.5004 13.8123 29.1341C14.1786 28.7664 14.774 28.7664 15.1404 29.1341L19.0637 33.0574V16.2581C18.424 15.9168 17.9822 15.2385 17.9822 14.471C17.9822 13.3685 18.8914 12.4593 19.9939 12.4593C21.0964 12.4593 22.0154 13.3685 22.0154 14.471C22.0154 15.235 21.5739 15.9104 20.9363 16.2532V33.0476L24.8572 29.1341C25.2236 28.7664 25.8189 28.7664 26.1853 29.1341C26.553 29.5004 26.553 30.0958 26.1853 30.4622L20.658 35.9798C20.4627 36.1735 20.1923 36.2716 19.9182 36.2483ZM16.1926 25.1375C11.9724 23.5864 8.96851 19.5319 8.96851 14.7859C8.96851 8.70474 13.9118 3.74832 19.9939 3.74832C26.076 3.74832 31.0315 8.70474 31.0315 14.7859C31.0315 19.5235 28.0329 23.5705 23.8245 25.1277C23.3405 25.3054 22.8039 25.0589 22.6233 24.576C22.4459 24.0913 22.6936 23.5544 23.1775 23.3748C26.6659 22.084 29.1565 18.7339 29.1565 14.7859C29.1565 9.71827 25.0629 5.63065 19.9939 5.63065C14.9249 5.63065 10.8411 9.71827 10.8411 14.7859C10.8411 18.7409 13.3414 22.0988 16.8396 23.3846C17.3212 23.5651 17.5674 24.1 17.3914 24.5833C17.2381 25.0323 16.7378 25.3636 16.1926 25.1375Z"
-                            fill="#EA860B" />
-                    </svg>
-                </button>
             </div>
         </div>
 
         <div class="front-hero__mobile-block">
             <div class="container">
                 {{> picture class="front-hero__mobile-img-wrap"
-                src="person-mobile.png" }}
+                src="person.png" }}
 
                 <div class="front-hero__mobile-text-wrap">
                     <h2 class="front-hero__name">
@@ -152,7 +154,7 @@
                     </div>
 
                     <ul class="types-block__list">
-                        {{# range 7}}
+                        {{# range 1}}
 
                         <li class="types-block__type-card type-card" data-aos="fade-up">
                             <section class="type-card__body">
@@ -218,7 +220,7 @@
         </div>
     </article>
 
-    <article class="frontpage__lead-block lead-block">
+    <article class="frontpage__lead-block lead-block--input-limited">
         <div class="lead-block__wrap">
             <div class="container">
                 <div class="lead-block__content">
@@ -229,7 +231,7 @@
                     <form class="lead-block__form-main form-main">
                         <div class="form-main__group">
                             {{> ./form/telInput countries=data }}
-                            <button class="form-main__submit-border">
+                            <button class="form-main__submit">
                                 Оставить заявку
                             </button>
                         </div>
@@ -462,10 +464,8 @@
                         {{# range 8}}
 
                         <div class="swiper-slide">
-                            <div class="reviews-slider__item">
-                                {{> picture src="placeholders/review1.jpg"
-                                class="reviews-slider__img" }}
-                            </div>
+                            {{> picture src="placeholders/review1.jpg"
+                            class="reviews-slider__item-img" }}
                         </div>
 
                         {{/ range }}
@@ -477,19 +477,19 @@
         </div>
     </article>
 
-    <article class="frontpage__lead-block lead-block" data-aos="fade-up">
+    <article class="frontpage__lead-block lead-block lead-block--vertical" data-aos="fade-up">
         <div class="lead-block__wrap">
             <div class="container">
-                <div class="lead-block__vertical-title">
-                    Записаться на бесплатную консультацию!
-                </div>
-
                 <div class="lead-block__content">
-                    <form class="front-hero__form-main form-main form-main--vertical">
+                    <div class="lead-block__title">
+                        Записаться на бесплатную консультацию!
+                    </div>
+
+                    <form class="lead-block__form-main form-main">
                         <div class="form-main__group">
                             {{> ./form/telInput countries=data }}
 
-                            <button class="form-main__submit-border">
+                            <button class="form-main__submit">
                                 Оставить заявку
                             </button>
                         </div>
@@ -586,27 +586,21 @@
                                 </li>
                             </ul>
 
-                            <form class="contacts-block__contacts-form contacts-form" data-aos="fade-up">
-                                <div class="contacts-form__name">
-                                    Или оставьте заявку:
-                                </div>
-
-                                <div class="contacts-form__group">
+                            <form class="lead-block__form-main form-main">
+                                <div class="form-main__group">
                                     {{> ./form/telInput countries=data }}
+                                    <button class="form-main__submit">
+                                        Оставить заявку
+                                    </button>
                                 </div>
-
-                                <button class="contacts-form__submit">
-                                    Оставить заявку
-                                </button>
 
                                 <div class="form-main__group form-main__group--checkbox">
-                                    <input class="form-main__input" type="checkbox" name="pol4" id="pol4" />
-                                    <label for="pol4" class="form-main__label">
-                                        Нажимая “Оставить заявку”, вы даете
-                                        согласие на обработку
-                                        <a href="#" data-modal="policy" class="form-main__btn-link">
-                                            персональных данных
-                                        </a>
+                                    <input class="form-main__input" type="checkbox" name="pol6" id="pol6" />
+                                    <label for="pol6" class="form-main__label">
+                                        Нажимая “Оставить заявку”, вы даете согласие на
+                                        обработку
+                                        <a href="#" data-modal="policy" class="form-main__btn-link">персональных
+                                            данных</a>
                                         и ознакомлен с
                                         <a href="#" data-modal="policy" class="form-main__btn-link">политикой
                                             конфеденциальности.</a>
