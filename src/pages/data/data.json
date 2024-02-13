@@ -11,14 +11,14 @@
         "phone_code": "+374",
         "country_name": "Armenia (Հայաստան)",
         "country_icon": "flags/am.svg",
-        "mask": "00-000-00-00"
+        "mask": "00-00000"
     },
     {
         "id": 3,
         "phone_code": "+994",
         "country_name": "Azerbaijan (Azərbaycan)",
-        "country_icon": "flags/az.svg",
-        "mask": "00-000-00-00"
+        "country_icon": "flags/az.svg", 
+        "mask": "00-0000000"
     },
     {
         "id": 4,
@@ -74,6 +74,6 @@
         "phone_code": "+34",
         "country_name": "Spain",
         "country_icon": "flags/sp.svg",
-        "mask": "000-000-0000"
+        "mask": "000-000-000"
     }
 ]
