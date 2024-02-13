@@ -60,6 +60,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: rem(16px);
         }
     }
 
@@ -101,4 +102,8 @@
         transition: 250ms;
         opacity: 1;
     }
+}
+
+.swiper-pagination-lock{
+    display: none;
 }
