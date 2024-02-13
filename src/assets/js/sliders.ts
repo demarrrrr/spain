@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modules: [Pagination],
         slidesPerView: 1,
         spaceBetween: 20,
+        watchOverflow: true,
         pagination: {
             el: '.reviews-slider__pagination',
             clickable: true,

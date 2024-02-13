@@ -162,3 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     initUrlAnchor()
 })
+
+window.addEventListener('resize', () => {
+    initBodyPadding()
+})
