@@ -80,9 +80,14 @@ const initMobileMenuInteractions = () => {
     headerLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
             const linkEl = link as HTMLAnchorElement
+            const currentURL = window.location.href.split('#')[0]
 
             if (linkEl.hash) {
-                e.preventDefault()
+                const urlWithoutHash = linkEl.href.split('#')[0]
+
+                if (urlWithoutHash.toLowerCase() === currentURL.toLowerCase()) {
+                    e.preventDefault()
+                }
 
                 scrollToAnchor(linkEl.hash)
 
@@ -148,9 +153,12 @@ const initAOS = () => {
 document.addEventListener('DOMContentLoaded', () => {
     initFaqToggles()
     initMobileMenuInteractions()
-    initUrlAnchor()
     initBodyPadding()
     initWidget()
     initNextBlockBtns()
     initAOS()
+})
+
+window.addEventListener('load', () => {
+    initUrlAnchor()
 })
