@@ -20,7 +20,7 @@
         }
 
         @include media-breakpoint-down(xs) {
-            display: none;
+            font-size: rem(9px);
         }
     }
 
@@ -37,6 +37,10 @@
         justify-content: space-between;
         align-items: center;
         gap: rem(10px);
+
+        @include media-breakpoint-down(xs) {
+            gap: rem(5px);
+        }
     }
 
     &__logo-wrap {
@@ -56,7 +60,11 @@
         }
 
         @include media-breakpoint-down(sm) {
-            font-size: rem(18px);
+            font-size: rem(14px);
+        }
+
+        @include media-breakpoint-down(xs) {
+            font-size: rem(10px);
         }
     }
 
@@ -87,6 +95,10 @@
         @include media-breakpoint-down(sm) {
             margin-right: rem(8px);
             border-radius: rem(6px);
+        }
+
+        @include media-breakpoint-down(xs) {
+            height: rem(30px);
         }
     }
 

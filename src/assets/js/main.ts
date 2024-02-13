@@ -154,3 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNextBlockBtns()
     initAOS()
 })
+
+window.addEventListener('resize', () => {
+    initBodyPadding()
+})
