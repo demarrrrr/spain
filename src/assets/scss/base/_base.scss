@@ -12,6 +12,8 @@ body {
     font-family: Gotham, sans-serif;
     color: var(--main);
     line-height: 145%;
+    transition: padding 500ms;
+    padding-top: rem(162px);
 }
 
 .sr-only {
