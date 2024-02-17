@@ -46,7 +46,7 @@
         margin: auto;
 
         @include media-breakpoint-down(lg) {
-            width: 90%;
+            width: calc(100% - 16px);
         }
 
         @include media-breakpoint-down(sm) {
