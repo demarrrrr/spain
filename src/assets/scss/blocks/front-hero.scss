@@ -244,6 +244,7 @@
 
         @include media-breakpoint-down(md) {
             display: block;
+            z-index: 1;
             padding: rem(75px 0);
             background: var(--accent-orange-light);
             margin-bottom: $pb-mobile;
